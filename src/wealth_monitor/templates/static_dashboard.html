@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>中银理财雷达</title>
+  <link rel="stylesheet" href="static/app.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html"><span class="mark">中</span><span><b>中银理财雷达</b><small>公开信息监控台</small></span></a>
+  <div class="live"><i></i>云端数据已发布</div>
+</header>
+<main>
+  <section class="hero">
+    <div><p class="eyebrow">WEALTH SIGNAL DESK</p><h1>把值得关注的产品，<br><em>提前放到眼前。</em></h1><p class="lead">每12小时整理中国银行与中银理财公开信息。只提供发现和筛选，不构成投资建议。</p></div>
+    {% if actions_url %}<a class="action-button" href="{{ actions_url }}" target="_blank" rel="noopener"><span>↻</span> 手动触发云端检查</a>{% endif %}
+  </section>
+  <section class="metrics">
+    <article><span>产品池</span><strong>{{ counts.total }}</strong><small>条公开记录</small></article>
+    <article><span>即将开放</span><strong>{{ counts.upcoming }}</strong><small>最高监控优先级</small></article>
+    <article><span>符合基础偏好</span><strong>{{ counts.preferred }}</strong><small>R1/R2 · 90天以内</small></article>
+    <article class="status"><span>最近检查</span><strong>已完成</strong><small>{{ generated_at[:16].replace('T',' ') }} · 每12小时</small></article>
+  </section>
+  <section>
+    <div class="section-title"><div><p class="eyebrow">COMING UP</p><h2>即将开放</h2></div><span class="muted">日期来自公开公告；未披露时刻不补全</span></div>
+    <div class="upcoming-grid">
+      {% for p in upcoming %}<a class="upcoming-card" href="products/{{ p.id }}.html"><div><span class="date">{{ p.open_start_date[5:] if p.open_start_date else '待定' }}</span><small>{{ '开放日' if p.open_start_date else '日期待披露' }}</small></div><div><h3>{{ p.product_name }}</h3><p>{{ p.manager }}</p><span class="pill">{{ p.risk_level or '风险待披露' }}</span> <span class="pill pale">{{ (p.min_holding_days|string) + '天' if p.min_holding_days else '持有期待披露' }}</span></div><b>→</b></a>
+      {% else %}<div class="empty">暂无即将发行或开放的产品</div>{% endfor %}
+    </div>
+  </section>
+  <section class="workspace">
+    <div class="catalog">
+      <div class="section-title"><div><p class="eyebrow">PRODUCT WATCHLIST</p><h2>产品观察池</h2></div><span id="visible-count" class="muted"></span></div>
+      <nav class="scopes">
+        <a class="selected" href="#" data-scope="all">全部产品</a><a href="#" data-scope="UPCOMING">即将开放</a><a href="#" data-scope="ACTIVE">当前在售</a><a href="#" data-scope="PREFERRED">符合基础偏好</a><a href="#" data-scope="HISTORICAL">历史参考</a>
+      </nav>
+      <form class="filters" id="filters">
+        <label>⌕<input id="query" placeholder="搜索产品名称、代码或管理人"></label>
+        <select id="risk"><option value="">全部风险</option><option>R1</option><option>R2</option><option>R3</option></select>
+        <select id="holding"><option value="">全部期限</option><option value="90">90天以内</option></select>
+        <button type="reset">重置</button>
+      </form>
+      <div class="table-wrap"><table><thead><tr><th>产品</th><th>风险 / 类型</th><th>最短持有</th><th>开放 / 状态</th><th>初筛标签</th><th></th></tr></thead><tbody id="product-rows">
+      {% for p in products %}<tr data-product data-search="{{ (p.product_name ~ ' ' ~ (p.product_code or '') ~ ' ' ~ (p.manager or ''))|lower }}" data-risk="{{ p.risk_level or '' }}" data-days="{{ p.min_holding_days or '' }}" data-status="{{ p.status }}" data-preferred="{{ '1' if p.preference_label == '符合基础偏好' else '0' }}"><td><strong>{{ p.product_name }}</strong><small>{{ p.product_code or '产品代码待披露' }} · {{ p.manager }}</small></td><td><span class="risk">{{ p.risk_level or '—' }}</span><small>{{ p.product_type or '类型待披露' }}</small></td><td>{{ (p.min_holding_days|string) + ' 天' if p.min_holding_days else '—' }}</td><td>{{ p.open_start_date or ('即将开放' if p.status == 'UPCOMING' else ('当前在售' if p.status == 'ACTIVE' else '历史参考')) }}<small>{{ '具体时间未披露' if p.open_start_date and not p.open_start_time else (p.open_start_time or '') }}</small></td><td><span class="tag {{ 'good' if p.preference_label == '符合基础偏好' else '' }}">{{ p.preference_label }}</span></td><td><a class="go" href="products/{{ p.id }}.html">查看 →</a></td></tr>{% endfor %}
+      <tr id="no-results" hidden><td colspan="6" class="empty">没有匹配的产品</td></tr></tbody></table></div>
+    </div>
+    <aside>
+      <div class="section-title"><div><p class="eyebrow">MONITOR PULSE</p><h2>监控脉搏</h2></div></div>
+      <div class="source-list">{% for s in sources %}<div><i class="{{ 'bad' if s.status == '异常' else 'ok' }}"></i><span><b>{{ s.source_name }}</b><small>{{ s.fetched_at[5:16].replace('T',' ') }} · {{ s.item_count }} 条</small></span><em>{{ s.status }}</em></div>{% else %}<p class="muted">首次云端检查后显示状态</p>{% endfor %}</div>
+      <h3 class="side-head">最近发现</h3><div class="timeline">{% for e in events %}<div><i></i><span><b>{{ e.summary }}</b><small>{{ e.detected_at[5:16].replace('T',' ') }}</small></span></div>{% endfor %}</div>
+    </aside>
+  </section>
+</main>
+<footer>信息来源：中国银行、中银理财公开网页　·　实时剩余额度：公开信息不可得</footer>
+<script>
+const rows=[...document.querySelectorAll('[data-product]')],query=document.querySelector('#query'),risk=document.querySelector('#risk'),holding=document.querySelector('#holding'),count=document.querySelector('#visible-count'),empty=document.querySelector('#no-results');let scope='all';
+function applyFilters(){const text=query.value.trim().toLowerCase();let visible=0;for(const row of rows){const inScope=scope==='all'||row.dataset.status===scope||(scope==='PREFERRED'&&row.dataset.preferred==='1');const matchesText=!text||row.dataset.search.includes(text);const matchesRisk=!risk.value||row.dataset.risk===risk.value;const matchesDays=!holding.value||(row.dataset.days&&Number(row.dataset.days)<=Number(holding.value));row.hidden=!(inScope&&matchesText&&matchesRisk&&matchesDays);if(!row.hidden)visible++;}count.textContent=`显示 ${visible} 条`;empty.hidden=visible!==0;}
+document.querySelectorAll('[data-scope]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();scope=link.dataset.scope;document.querySelectorAll('[data-scope]').forEach(item=>item.classList.toggle('selected',item===link));applyFilters();}));document.querySelector('#filters').addEventListener('input',applyFilters);document.querySelector('#filters').addEventListener('reset',()=>setTimeout(applyFilters));applyFilters();
+</script>
+</body></html>

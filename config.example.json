@@ -1,0 +1,8 @@
+{
+  "web_host": "127.0.0.1",
+  "web_port": 8765,
+  "scan_interval_minutes": 720,
+  "jitter_seconds": 60,
+  "risk_levels": ["R1", "R2"],
+  "preferred_holding_days_max": 90
+}
