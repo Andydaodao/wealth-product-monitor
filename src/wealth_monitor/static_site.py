@@ -10,6 +10,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from .database import connect
 from .monitor import normalize_source_url, now, refresh_all, seed_public_snapshot
+from .performance import calculate_performance
 
 ROOT = Path(__file__).resolve().parents[2]
 TEMPLATE_DIR = ROOT / "src" / "wealth_monitor" / "templates"
@@ -31,6 +32,10 @@ STATE_TABLES = {
     "source_runs": (
         "id", "scan_id", "source_name", "url", "fetched_at", "status",
         "http_status", "item_count", "new_count", "error_message",
+    ),
+    "nav_history": (
+        "id", "product_code", "nav_date", "unit_nav", "cumulative_nav",
+        "ten_thousand_income", "seven_day_annualized", "source_url",
     ),
 }
 
@@ -75,6 +80,10 @@ def save_state(path: Path = STATE_PATH) -> None:
                     db.execute("SELECT * FROM source_runs ORDER BY id DESC LIMIT 50").fetchall()
                 )
             ],
+            "nav_history": [
+                dict(row)
+                for row in db.execute("SELECT * FROM nav_history ORDER BY product_code,nav_date")
+            ],
         }
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", "utf-8")
 
@@ -110,6 +119,9 @@ def render_site(output_dir: Path = OUTPUT_DIR) -> None:
             "SUM(CASE WHEN status='异常' THEN 1 ELSE 0 END) error_count "
             "FROM source_runs WHERE scan_id IS NOT NULL GROUP BY scan_id "
             "ORDER BY MAX(id) DESC LIMIT 4"
+        )]
+        nav_rows = [dict(row) for row in db.execute(
+            "SELECT * FROM nav_history ORDER BY product_code,nav_date"
         )]
 
     for scan in recent_scans:
@@ -151,7 +163,12 @@ def render_site(output_dir: Path = OUTPUT_DIR) -> None:
     detail_template = environment.get_template("static_detail.html")
     for product in products:
         product_events = [e for e in events if e["product_key"] == product["product_key"]]
-        detail = detail_template.render(product=product, events=product_events)
+        product_nav = [row for row in nav_rows if row["product_code"] == product["product_code"]]
+        detail = detail_template.render(
+            product=product,
+            events=product_events,
+            performance=calculate_performance(product_nav),
+        )
         (output_dir / "products" / f"{product['id']}.html").write_text(detail, "utf-8")
 
     shutil.copy2(ROOT / "src" / "wealth_monitor" / "static" / "app.css", output_dir / "static" / "app.css")

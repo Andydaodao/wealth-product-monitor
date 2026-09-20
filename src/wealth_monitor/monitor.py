@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 import hashlib
 import re
-from urllib.parse import urlsplit, urlunsplit
+from urllib.parse import urljoin, urlsplit, urlunsplit
 
 from bs4 import BeautifulSoup
 import httpx
@@ -14,7 +14,10 @@ from .config import CONFIG
 TZ = timezone(timedelta(hours=8), "Asia/Shanghai")
 PRODUCT_URL = "https://www.bocwm.cn/"
 NOTICE_URL = "https://www.bocwm.cn/html/1/198/197/index.html"
+NAV_INDEX_URL = "https://www.bankofchina.com/sdbapp/wmpnetworth/"
+NAV_SOURCE_NAME = "中国银行理财产品净值"
 HEADERS = {"User-Agent": "Personal-Wealth-Product-Monitor/1.0 (+local personal use)"}
+PUBLIC_SNAPSHOT_DATE = "2026-09-14"
 
 # 取自中银理财公开首页的最近快照。首次启动即有可评审界面；联网刷新后按产品代码覆盖。
 PUBLIC_SNAPSHOT = [
@@ -119,9 +122,155 @@ def parse_notice_page(html: str) -> list[dict]:
     return list(products.values())
 
 
+def parse_nav_index(html: str) -> dict[str, str]:
+    """Return product-code to official BOC history page mappings."""
+    result = {}
+    for link in BeautifulSoup(html, "html.parser").find_all("a", href=True):
+        href = str(link["href"])
+        if "/sdbapp/wmpnetworth/" not in href:
+            continue
+        title = link.get_text(" ", strip=True).upper()
+        code = re.search(r"([A-Z0-9]{6,})\s*$", title)
+        if code:
+            result[code.group(1)] = urljoin(NAV_INDEX_URL, href)
+    return result
+
+
+def _number(value: str) -> str | None:
+    value = value.strip().replace(",", "").replace("％", "%")
+    match = re.search(r"-?\d+(?:\.\d+)?", value)
+    return match.group(0) if match else None
+
+
+def parse_nav_page(html: str, source_url: str) -> tuple[list[dict], int]:
+    """Parse both net-value and cash-management table layouts."""
+    soup = BeautifulSoup(html, "html.parser")
+    rows = []
+    aliases = {
+        "product_code": ("产品代码",),
+        "unit_nav": ("份额净值", "单位净值"),
+        "cumulative_nav": ("份额累计净值", "累计净值"),
+        "ten_thousand_income": ("每万份收益", "每万份净收益"),
+        "seven_day_annualized": ("七日年化收益率", "七日年化"),
+        "nav_date": ("发布日期", "截止日期"),
+    }
+    for table in soup.find_all("table"):
+        table_rows = table.find_all("tr")
+        if not table_rows:
+            continue
+        headers = [cell.get_text(" ", strip=True) for cell in table_rows[0].find_all(["th", "td"])]
+        positions = {}
+        for field, names in aliases.items():
+            positions[field] = next((i for i, header in enumerate(headers) if any(name in header for name in names)), None)
+        if positions["product_code"] is None or positions["nav_date"] is None:
+            continue
+        for row in table_rows[1:]:
+            cells = [cell.get_text(" ", strip=True) for cell in row.find_all(["th", "td"])]
+            if len(cells) <= max(i for i in positions.values() if i is not None):
+                continue
+            nav_date = cells[positions["nav_date"]]
+            if not re.fullmatch(r"20\d{2}-\d{2}-\d{2}", nav_date):
+                continue
+            item = {
+                "product_code": cells[positions["product_code"]].strip().upper(),
+                "nav_date": nav_date,
+                "source_url": source_url,
+            }
+            for field in ("unit_nav", "cumulative_nav", "ten_thousand_income", "seven_day_annualized"):
+                index = positions[field]
+                item[field] = _number(cells[index]) if index is not None else None
+            rows.append(item)
+    page_count = re.search(r"共\s*(\d+)\s*页", soup.get_text(" ", strip=True))
+    return rows, int(page_count.group(1)) if page_count else 1
+
+
+def _nav_page_url(first_url: str, page_index: int) -> str:
+    if page_index == 0:
+        return first_url
+    stem, suffix = first_url.rsplit(".", 1)
+    return f"{stem}_{page_index}.{suffix}"
+
+
+def upsert_nav_rows(rows: list[dict]) -> int:
+    inserted = 0
+    with connect() as db:
+        for row in rows:
+            existed = db.execute(
+                "SELECT 1 FROM nav_history WHERE product_code=? AND nav_date=?",
+                (row["product_code"], row["nav_date"]),
+            ).fetchone()
+            db.execute(
+                "INSERT INTO nav_history(product_code,nav_date,unit_nav,cumulative_nav,"
+                "ten_thousand_income,seven_day_annualized,source_url) VALUES(?,?,?,?,?,?,?) "
+                "ON CONFLICT(product_code,nav_date) DO UPDATE SET "
+                "unit_nav=excluded.unit_nav,cumulative_nav=excluded.cumulative_nav,"
+                "ten_thousand_income=excluded.ten_thousand_income,"
+                "seven_day_annualized=excluded.seven_day_annualized,source_url=excluded.source_url",
+                tuple(row.get(column) for column in (
+                    "product_code", "nav_date", "unit_nav", "cumulative_nav",
+                    "ten_thousand_income", "seven_day_annualized", "source_url",
+                )),
+            )
+            inserted += existed is None
+    return inserted
+
+
+async def refresh_nav_history(client: httpx.AsyncClient) -> tuple[int, int]:
+    index_response = await client.get(NAV_INDEX_URL)
+    index_response.raise_for_status()
+    history_urls = parse_nav_index(index_response.text)
+    with connect() as db:
+        codes = [row[0] for row in db.execute(
+            "SELECT DISTINCT product_code FROM products WHERE product_code IS NOT NULL"
+        )]
+
+    item_count = 0
+    new_count = 0
+    for code in codes:
+        first_url = history_urls.get(code.upper())
+        if not first_url:
+            continue
+        first_response = await client.get(first_url)
+        first_response.raise_for_status()
+        first_rows, page_count = parse_nav_page(first_response.text, first_url)
+        item_count += len(first_rows)
+        new_count += upsert_nav_rows(first_rows)
+
+        with connect() as db:
+            saved_count = db.execute(
+                "SELECT COUNT(*) FROM nav_history WHERE product_code=?", (code,)
+            ).fetchone()[0]
+        page_indexes = []
+        if saved_count < 50:
+            page_indexes.extend(range(1, min(page_count, 20)))
+        if page_count > 1 and page_count - 1 not in page_indexes:
+            page_indexes.append(page_count - 1)
+        for page_index in page_indexes:
+            page_url = _nav_page_url(first_url, page_index)
+            response = await client.get(page_url)
+            response.raise_for_status()
+            page_rows, _ = parse_nav_page(response.text, page_url)
+            item_count += len(page_rows)
+            new_count += upsert_nav_rows(page_rows)
+    return item_count, new_count
+
+
 def seed_public_snapshot() -> None:
     for item in PUBLIC_SNAPSHOT:
         upsert_product(item, "中银理财产品展示（公开快照）", item.get("url", PRODUCT_URL))
+    upsert_nav_rows([
+        {
+            "product_code": item["code"],
+            "nav_date": PUBLIC_SNAPSHOT_DATE,
+            "unit_nav": item["nav"],
+            "cumulative_nav": item["nav"],
+            "ten_thousand_income": None,
+            "seven_day_annualized": None,
+            "source_url": item.get("url", PRODUCT_URL),
+        }
+        for item in PUBLIC_SNAPSHOT
+        if item.get("code") and item.get("nav")
+    ])
     for item in NOTICE_SNAPSHOT:
         upsert_product(item, "中银理财产品公告（公开快照）", item["url"])
     with connect() as db:
@@ -154,7 +303,31 @@ async def refresh_all() -> dict:
             except Exception as exc:
                 message = str(exc)[:240]
                 with connect() as db:
-                    db.execute("INSERT INTO source_runs(scan_id,source_name,url,fetched_at,status,item_count,new_count,error_message) VALUES(?,?,?,?,?,?,?)",
+                    db.execute("INSERT INTO source_runs(scan_id,source_name,url,fetched_at,status,item_count,new_count,error_message) VALUES(?,?,?,?,?,?,?,?)",
                                (scan_id, source, url, stamp, "异常", 0, 0, message))
                 results.append({"source": source, "status": "异常", "error": message})
+        stamp = now()
+        try:
+            item_count, new_count = await refresh_nav_history(client)
+            with connect() as db:
+                db.execute(
+                    "INSERT INTO source_runs(scan_id,source_name,url,fetched_at,status,http_status,item_count,new_count) "
+                    "VALUES(?,?,?,?,?,?,?,?)",
+                    (scan_id, NAV_SOURCE_NAME, NAV_INDEX_URL, stamp, "正常", 200, item_count, 0),
+                )
+            results.append({
+                "source": NAV_SOURCE_NAME,
+                "status": "正常",
+                "items": item_count,
+                "new_nav_points": new_count,
+            })
+        except Exception as exc:
+            message = str(exc)[:240]
+            with connect() as db:
+                db.execute(
+                    "INSERT INTO source_runs(scan_id,source_name,url,fetched_at,status,item_count,new_count,error_message) "
+                    "VALUES(?,?,?,?,?,?,?,?)",
+                    (scan_id, NAV_SOURCE_NAME, NAV_INDEX_URL, stamp, "异常", 0, 0, message),
+                )
+            results.append({"source": NAV_SOURCE_NAME, "status": "异常", "error": message})
     return {"runs": results, "at": now()}

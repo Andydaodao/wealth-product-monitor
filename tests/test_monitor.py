@@ -1,6 +1,16 @@
 import json
 
-from wealth_monitor.monitor import parse_homepage, parse_notice_page, preference, upsert_product
+from wealth_monitor.monitor import (
+    parse_homepage,
+    parse_nav_index,
+    parse_nav_page,
+    parse_notice_page,
+    preference,
+    seed_public_snapshot,
+    upsert_nav_rows,
+    upsert_product,
+)
+from wealth_monitor.performance import calculate_performance
 from wealth_monitor import database
 from wealth_monitor.app import app
 from wealth_monitor.static_site import render_site, restore_state, save_state
@@ -41,6 +51,62 @@ def test_unknown_risk_does_not_pass_risk_preference():
     assert preference("中银理财-稳富纯债7天持有期2号", 7, None) == "信息不足"
 
 
+def test_public_snapshot_seeds_dated_nav_for_local_preview(monkeypatch, tmp_path):
+    monkeypatch.setattr(database, "DB_PATH", tmp_path / "snapshot.db")
+    seed_public_snapshot()
+    with database.connect() as db:
+        row = db.execute(
+            "SELECT nav_date,cumulative_nav FROM nav_history WHERE product_code='CYQWFCZ7D2A'"
+        ).fetchone()
+    assert tuple(row) == ("2026-09-14", "1.014003")
+
+
+def test_parse_official_nav_index_and_history():
+    index_html = '<a href="/sdbapp/wmpnetworth/7784/7788/13061/index_1719.html">中银理财-稳富7天-CYQWFZQHYLD7DA</a>'
+    assert parse_nav_index(index_html) == {
+        "CYQWFZQHYLD7DA": "https://www.bankofchina.com/sdbapp/wmpnetworth/7784/7788/13061/index_1719.html"
+    }
+    page_html = """
+    <table><tr><th>产品代码</th><th>产品名称</th><th>份额净值</th><th>份额累计净值</th><th>发布日期</th></tr>
+    <tr><td>CYQWFZQHYLD7DA</td><td>测试产品</td><td>1.0123</td><td>1.0456</td><td>2026-09-19</td></tr></table>
+    <div>共2页</div>
+    """
+    rows, pages = parse_nav_page(page_html, "https://example.com/history.html")
+    assert pages == 2
+    assert rows == [{
+        "product_code": "CYQWFZQHYLD7DA",
+        "nav_date": "2026-09-19",
+        "source_url": "https://example.com/history.html",
+        "unit_nav": "1.0123",
+        "cumulative_nav": "1.0456",
+        "ten_thousand_income": None,
+        "seven_day_annualized": None,
+    }]
+
+
+def test_calculate_public_nav_performance_uses_nearby_baselines():
+    rows = [
+        {"nav_date": "2026-01-01", "cumulative_nav": "1.0000", "unit_nav": "1.0000", "source_url": "https://example.com"},
+        {"nav_date": "2026-03-20", "cumulative_nav": "1.0200", "unit_nav": "1.0200", "source_url": "https://example.com"},
+        {"nav_date": "2026-06-19", "cumulative_nav": "1.0400", "unit_nav": "1.0400", "source_url": "https://example.com"},
+        {"nav_date": "2026-08-20", "cumulative_nav": "1.0600", "unit_nav": "1.0600", "source_url": "https://example.com"},
+        {"nav_date": "2026-09-19", "cumulative_nav": "1.0700", "unit_nav": "1.0700", "source_url": "https://example.com"},
+    ]
+    performance = calculate_performance(rows)
+    assert performance["latest_nav"] == "1.0700"
+    assert [period["return_text"] for period in performance["periods"]] == [
+        "+0.94%", "+2.88%", "+4.90%", "+7.00%", "+7.00%"
+    ]
+
+
+def test_new_product_does_not_force_an_inception_return():
+    performance = calculate_performance([
+        {"nav_date": "2026-09-10", "cumulative_nav": "1.0000", "source_url": "https://example.com"},
+        {"nav_date": "2026-09-19", "cumulative_nav": "1.0010", "source_url": "https://example.com"},
+    ])
+    assert all(period["return_text"] is None for period in performance["periods"])
+
+
 def test_watchlist_is_independent_from_lifecycle(monkeypatch, tmp_path):
     monkeypatch.setattr(database, "DB_PATH", tmp_path / "watchlist.db")
     upsert_product({"code": "P1", "name": "测试在售产品", "risk": "R2"}, "离线样例", "https://example.com")
@@ -71,6 +137,10 @@ def test_static_site_round_trip(monkeypatch, tmp_path):
         "离线样例",
         "https://example.com",
     )
+    upsert_nav_rows([
+        {"product_code": "P3", "nav_date": "2026-08-19", "unit_nav": "1.0000", "cumulative_nav": "1.0000", "ten_thousand_income": None, "seven_day_annualized": None, "source_url": "https://example.com/nav"},
+        {"product_code": "P3", "nav_date": "2026-09-19", "unit_nav": "1.0100", "cumulative_nav": "1.0100", "ten_thousand_income": None, "seven_day_annualized": None, "source_url": "https://example.com/nav"},
+    ])
     save_state(state_path)
     monkeypatch.setattr(database, "DB_PATH", tmp_path / "next_run.db")
     restore_state(state_path)
@@ -78,6 +148,8 @@ def test_static_site_round_trip(monkeypatch, tmp_path):
 
     assert "静态页面测试产品" in (output_path / "index.html").read_text("utf-8")
     assert (output_path / "products" / "1.html").exists()
+    assert "公开净值表现" in (output_path / "products" / "1.html").read_text("utf-8")
+    assert "+1.00%" in (output_path / "products" / "1.html").read_text("utf-8")
     assert (output_path / "static" / "app.css").exists()
 
 

@@ -30,6 +30,12 @@ CREATE TABLE IF NOT EXISTS watchlist (
  created_at TEXT NOT NULL,
  FOREIGN KEY(product_key) REFERENCES products(product_key) ON DELETE CASCADE
 );
+CREATE TABLE IF NOT EXISTS nav_history (
+ id INTEGER PRIMARY KEY, product_code TEXT NOT NULL, nav_date TEXT NOT NULL,
+ unit_nav TEXT, cumulative_nav TEXT, ten_thousand_income TEXT,
+ seven_day_annualized TEXT, source_url TEXT NOT NULL,
+ UNIQUE(product_code, nav_date)
+);
 """
 
 
