@@ -2,8 +2,7 @@ import json
 
 from wealth_monitor.monitor import (
     parse_homepage,
-    parse_nav_index,
-    parse_nav_page,
+    parse_nav_api,
     parse_notice_page,
     preference,
     seed_public_snapshot,
@@ -51,36 +50,43 @@ def test_unknown_risk_does_not_pass_risk_preference():
     assert preference("中银理财-稳富纯债7天持有期2号", 7, None) == "信息不足"
 
 
-def test_public_snapshot_seeds_dated_nav_for_local_preview(monkeypatch, tmp_path):
+def test_public_snapshot_removes_the_invalid_dated_nav_preview(monkeypatch, tmp_path):
     monkeypatch.setattr(database, "DB_PATH", tmp_path / "snapshot.db")
+    upsert_nav_rows([{
+        "product_code": "CYQWFCZ7D2A", "nav_date": "2026-09-14",
+        "unit_nav": "1.014003", "cumulative_nav": "1.014003",
+        "ten_thousand_income": None, "seven_day_annualized": None,
+        "source_url": "https://www.bocwm.cn/html/1/4/9494.html",
+    }])
     seed_public_snapshot()
     with database.connect() as db:
-        row = db.execute(
-            "SELECT nav_date,cumulative_nav FROM nav_history WHERE product_code='CYQWFCZ7D2A'"
-        ).fetchone()
-    assert tuple(row) == ("2026-09-14", "1.014003")
+        count = db.execute("SELECT COUNT(*) FROM nav_history").fetchone()[0]
+    assert count == 0
 
 
-def test_parse_official_nav_index_and_history():
-    index_html = '<a href="/sdbapp/wmpnetworth/7784/7788/13061/index_1719.html">中银理财-稳富7天-CYQWFZQHYLD7DA</a>'
-    assert parse_nav_index(index_html) == {
-        "CYQWFZQHYLD7DA": "https://www.bankofchina.com/sdbapp/wmpnetworth/7784/7788/13061/index_1719.html"
+def test_parse_official_bocwm_nav_api():
+    payload = {
+        "result": True,
+        "total": 100,
+        "data": [{
+            "productCode": "CYQWFCZ7D2A",
+            "shareNetWorth": "1.014450",
+            "cumulativeNetWorth": "1.014450",
+            "eachTenThousandProfit": None,
+            "sevenDayAnnualization": None,
+            "releaseDate": "2026-09-16",
+        }],
     }
-    page_html = """
-    <table><tr><th>产品代码</th><th>产品名称</th><th>份额净值</th><th>份额累计净值</th><th>发布日期</th></tr>
-    <tr><td>CYQWFZQHYLD7DA</td><td>测试产品</td><td>1.0123</td><td>1.0456</td><td>2026-09-19</td></tr></table>
-    <div>共2页</div>
-    """
-    rows, pages = parse_nav_page(page_html, "https://example.com/history.html")
-    assert pages == 2
+    rows, total = parse_nav_api(payload, "https://www.bocwm.cn/html/1/4/9494.html")
+    assert total == 100
     assert rows == [{
-        "product_code": "CYQWFZQHYLD7DA",
-        "nav_date": "2026-09-19",
-        "source_url": "https://example.com/history.html",
-        "unit_nav": "1.0123",
-        "cumulative_nav": "1.0456",
+        "product_code": "CYQWFCZ7D2A",
+        "nav_date": "2026-09-16",
+        "unit_nav": "1.014450",
+        "cumulative_nav": "1.014450",
         "ten_thousand_income": None,
         "seven_day_annualized": None,
+        "source_url": "https://www.bocwm.cn/html/1/4/9494.html",
     }]
 
 
@@ -97,6 +103,9 @@ def test_calculate_public_nav_performance_uses_nearby_baselines():
     assert [period["return_text"] for period in performance["periods"]] == [
         "+0.94%", "+2.88%", "+4.90%", "+7.00%", "+7.00%"
     ]
+    assert [period["annualized_text"] for period in performance["periods"]] == [
+        "+12.10%", "+11.94%", "+10.02%", "+9.92%", "+9.92%"
+    ]
 
 
 def test_new_product_does_not_force_an_inception_return():
@@ -105,6 +114,7 @@ def test_new_product_does_not_force_an_inception_return():
         {"nav_date": "2026-09-19", "cumulative_nav": "1.0010", "source_url": "https://example.com"},
     ])
     assert all(period["return_text"] is None for period in performance["periods"])
+    assert all(period["annualized_text"] is None for period in performance["periods"])
 
 
 def test_watchlist_is_independent_from_lifecycle(monkeypatch, tmp_path):
@@ -149,6 +159,7 @@ def test_static_site_round_trip(monkeypatch, tmp_path):
     assert "静态页面测试产品" in (output_path / "index.html").read_text("utf-8")
     assert (output_path / "products" / "1.html").exists()
     assert "公开净值表现" in (output_path / "products" / "1.html").read_text("utf-8")
+    assert "折算年化" in (output_path / "products" / "1.html").read_text("utf-8")
     assert "+1.00%" in (output_path / "products" / "1.html").read_text("utf-8")
     assert (output_path / "static" / "app.css").exists()
 

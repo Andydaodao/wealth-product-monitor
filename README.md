@@ -5,7 +5,8 @@
 ## 安装与启动（Windows PowerShell）
 
 ```powershell
-cd C:\work\平台化\tmp\boc_monitor\wealth-product-monitor
+git clone https://github.com/Andydaodao/wealth-product-monitor.git
+cd wealth-product-monitor
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e ".[test]"
 Copy-Item config.example.json config.json
@@ -30,7 +31,7 @@ Copy-Item config.example.json config.json
 
 - 中银理财产品首页：解析产品名称、产品代码和名称中明确出现的最短持有期。
 - 中银理财公告：解析公开公告列表的开放预告与发行公告；具体时刻未披露时保持为空。
-- 中国银行理财产品净值：按产品代码匹配公开历史净值。首次匹配时补录最近最多 20 页和成立时首条记录，之后每次扫描更新最新一页。
+- 中银理财产品详情公开接口：按观察池内的产品代码读取逐日净值历史；接口与官网产品详情页的净值表和走势图使用同一数据源。
 - 募集规模上限与风险等级只有在公开页面明确提供时才保存。
 - 实时剩余额度在公开页面不可得，页面始终如实标记。
 - 企业代理拦截银行站点时，监控状态显示“异常”，本地服务和历史数据仍可使用。
@@ -39,11 +40,11 @@ Copy-Item config.example.json config.json
 
 这是可交互的首版预览，尚未达到规格中的完整 V1 验收。已完成本地服务、SQLite、公开快照、产品与公告列表解析、首次发现去重、搜索、风险/持有期筛选、产品详情、来源状态和定时检查。产品生命周期使用 `UPCOMING / ACTIVE / HISTORICAL`，用户关注单独保存在 `watchlist` 表中，因此在售产品也能同时加入“我的关注”。
 
-产品“查看”详情页会根据累计净值计算近1月、3月、6月、今年以来和成立以来的区间收益。区间起点附近缺少净值时显示“数据不足”；成立以来至少需要 3 个净值点且跨度达到 7 天。现金管理类只展示每万份收益与七日年化，不用固定单位净值计算虚假的区间收益。公开净值目录只补充已由发行公告、开放预告或首页展示发现的产品，不会把完整代销目录全部加入观察池。
+产品“查看”详情页会根据累计净值计算近1月、3月、6月、今年以来和成立以来的区间涨幅，并按实际天数进行几何年化。页面以“折算年化”为主，同时保留区间涨幅、实际天数和基准日期。区间起点附近缺少净值时显示“数据不足”；成立以来至少需要 3 个净值点且跨度达到 7 天。现金管理类只展示每万份收益与七日年化，不用固定单位净值计算虚假的区间收益。公开净值目录只补充已由发行公告、开放预告或首页展示发现的产品，不会把完整代销目录全部加入观察池。
 
 Windows 通知、ntfy、PDF 附件解析、中国银行动态查询平台、完整变更事件与产品合并、同系列历史对比、24 小时稳定性验证尚未完成。当前电脑的企业代理要求认证，银行实时抓取尚未验证成功；不会绕过代理或银行安全控制。
 
-公开来源：[中银理财产品首页](https://www.bocwm.cn/)、[产品公告](https://www.bocwm.cn/html/1/198/197/index.html)、[中国银行理财产品净值](https://www.bankofchina.com/sdbapp/wmpnetworth/)、[纯债7天持有期2号详情](https://www.bocwm.cn/html/1/4/9494.html)。
+公开来源：[中银理财产品首页](https://www.bocwm.cn/)、[产品公告](https://www.bocwm.cn/html/1/198/197/index.html)、[产品净值表现](https://www.bocwm.cn/html/1/198/199/index.html)、[纯债7天持有期2号详情](https://www.bocwm.cn/html/1/4/9494.html)。
 
 ## 发布到 GitHub Pages
 

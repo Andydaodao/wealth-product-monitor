@@ -15,6 +15,13 @@ def _percent(value: Decimal) -> str:
     return f"{value * 100:+.2f}%"
 
 
+def _annualized(change: Decimal, days: int) -> str | None:
+    if days < 7:
+        return None
+    annualized = Decimal(str((1 + float(change)) ** (365 / days) - 1))
+    return _percent(annualized)
+
+
 def calculate_performance(rows: list[dict]) -> dict | None:
     observations = []
     for row in rows:
@@ -58,13 +65,19 @@ def calculate_performance(rows: list[dict]) -> dict | None:
         candidates = [row for row in valued if row["date"] <= target]
         base = candidates[-1] if candidates else None
         if base is None or target - base["date"] > timedelta(days=10):
-            result["periods"].append({"label": label, "return_text": None, "base_date": None})
+            result["periods"].append({
+                "label": label, "return_text": None, "annualized_text": None,
+                "base_date": None, "days": None,
+            })
             continue
         change = latest["value"] / base["value"] - Decimal("1")
+        days = (latest["date"] - base["date"]).days
         result["periods"].append({
             "label": label,
             "return_text": _percent(change),
+            "annualized_text": _annualized(change, days),
             "base_date": base["nav_date"],
+            "days": days,
         })
 
     first = valued[0] if valued else None
@@ -74,10 +87,18 @@ def calculate_performance(rows: list[dict]) -> dict | None:
         and len(valued) >= 3
         and latest["date"] - first["date"] >= timedelta(days=7)
     ):
-        inception_text = _percent(latest["value"] / first["value"] - Decimal("1"))
+        inception_change = latest["value"] / first["value"] - Decimal("1")
+        inception_text = _percent(inception_change)
+        inception_days = (latest["date"] - first["date"]).days
+        inception_annualized = _annualized(inception_change, inception_days)
+    else:
+        inception_days = None
+        inception_annualized = None
     result["periods"].append({
         "label": "成立以来",
         "return_text": inception_text,
+        "annualized_text": inception_annualized,
         "base_date": first["nav_date"] if inception_text else None,
+        "days": inception_days,
     })
     return result
