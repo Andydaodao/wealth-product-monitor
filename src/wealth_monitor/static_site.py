@@ -190,3 +190,53 @@ def render_site(output_dir: Path = OUTPUT_DIR) -> None:
         products=products,
         upcoming=upcoming,
         events=events,
+        sources=sources,
+        recent_scans=recent_scans,
+        counts=counts,
+        generated_at=generated_at,
+        scan_status=scan_status,
+        actions_url=actions_url,
+    )
+    (output_dir / "index.html").write_text(index, "utf-8")
+
+    holdings_catalog = load_holdings_catalog()
+    for item in holdings_catalog:
+        item["detail_url"] = f"products/{item['id']}.html"
+    holdings = environment.get_template("holdings.html").render(
+        catalog=holdings_catalog,
+        home_href="index.html",
+        asset_prefix="",
+    )
+    (output_dir / "holdings.html").write_text(holdings, "utf-8")
+
+    detail_template = environment.get_template("static_detail.html")
+    for product in products:
+        product_events = [e for e in events if e["product_key"] == product["product_key"]]
+        product_nav = [row for row in nav_rows if row["product_code"] == product["product_code"]]
+        detail = detail_template.render(
+            product=product,
+            events=product_events,
+            performance=calculate_performance(product_nav),
+        )
+        (output_dir / "products" / f"{product['id']}.html").write_text(detail, "utf-8")
+
+    shutil.copy2(ROOT / "src" / "wealth_monitor" / "static" / "app.css", output_dir / "static" / "app.css")
+    shutil.copy2(ROOT / "src" / "wealth_monitor" / "static" / "holdings.js", output_dir / "static" / "holdings.js")
+
+
+async def build() -> dict:
+    restore_state()
+    seed_public_snapshot()
+    result = await refresh_all()
+    save_state()
+    render_site()
+    return result
+
+
+def main() -> None:
+    result = asyncio.run(build())
+    print(json.dumps(result))
+
+
+if __name__ == "__main__":
+    main()
