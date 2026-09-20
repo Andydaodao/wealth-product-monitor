@@ -148,14 +148,6 @@
     })[character]);
   }
 
-  function productDataStatus(product) {
-    const rows = normalizedNav(product);
-    if (!rows.length) return "暂无公开净值";
-    const latest = rows.at(-1);
-    if (rows.length === 1) return `1 个净值点 · ${latest.date}`;
-    return `${rows.length} 个净值点 · 更新至 ${latest.date}`;
-  }
-
   function renderProductOptions() {
     const query = productSearch.value.trim().toLocaleLowerCase("zh-CN");
     const matches = catalog.filter((product) => !query
@@ -170,7 +162,6 @@
     } else {
       productOptions.innerHTML = visible.map((product) => `<button type="button" class="product-option${selectedCode === normalizeCode(product.code) ? " selected" : ""}" data-product-code="${escapeHtml(product.code)}">
         <span><b>${escapeHtml(product.name)}</b><small>${escapeHtml(product.code)}</small></span>
-        <em>${escapeHtml(productDataStatus(product))}</em>
       </button>`).join("");
     }
 
