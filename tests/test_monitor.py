@@ -199,12 +199,12 @@ def test_local_holdings_page_contains_public_nav_data(monkeypatch, tmp_path):
     assert "持仓仅保存在当前浏览器" in response.text
 
 
-def test_holdings_catalog_only_lists_active_products_with_history(monkeypatch, tmp_path):
+def test_holdings_catalog_only_lists_products_with_history(monkeypatch, tmp_path):
     monkeypatch.setattr(database, "DB_PATH", tmp_path / "catalog.db")
     upsert_product({"code": "READY2", "name": "净值充足"}, "离线样例", "https://example.com")
     upsert_product({"code": "ONLY1", "name": "只有一个净值"}, "离线样例", "https://example.com")
     upsert_product(
-        {"code": "FUTURE2", "name": "尚未发售", "date": "2099-01-01"},
+        {"code": "FUTURE2", "name": "公告状态待校准", "lifecycle_status": "UPCOMING"},
         "离线样例",
         "https://example.com",
     )
@@ -216,7 +216,7 @@ def test_holdings_catalog_only_lists_active_products_with_history(monkeypatch, t
         {"product_code": "FUTURE2", "nav_date": "2026-09-19", "unit_nav": "1.0010", "cumulative_nav": "1.0010", "ten_thousand_income": None, "seven_day_annualized": None, "source_url": "https://example.com/nav"},
     ])
 
-    assert [product["code"] for product in load_holdings_catalog()] == ["READY2"]
+    assert {product["code"] for product in load_holdings_catalog()} == {"READY2", "FUTURE2"}
 
 
 def test_legacy_state_and_recent_scan_summary(monkeypatch, tmp_path):

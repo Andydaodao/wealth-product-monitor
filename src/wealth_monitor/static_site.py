@@ -48,7 +48,7 @@ def load_holdings_catalog() -> list[dict]:
             "JOIN (SELECT UPPER(product_code) product_code FROM nav_history "
             "GROUP BY UPPER(product_code) HAVING COUNT(DISTINCT nav_date)>=2) n "
             "ON UPPER(p.product_code)=n.product_code "
-            "WHERE p.product_code IS NOT NULL AND p.status='ACTIVE' "
+            "WHERE p.product_code IS NOT NULL "
             "ORDER BY p.last_seen_at DESC"
         )]
         nav_rows = [dict(row) for row in db.execute(
