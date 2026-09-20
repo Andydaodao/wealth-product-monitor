@@ -20,7 +20,7 @@
     <article><span>产品池</span><strong>{{ counts.total }}</strong><small>条公开记录</small></article>
     <article><span>即将开放</span><strong>{{ counts.upcoming }}</strong><small>最高监控优先级</small></article>
     <article><span>符合基础偏好</span><strong>{{ counts.preferred }}</strong><small>R1/R2 · 90天以内</small></article>
-    <article class="status"><span>最近检查</span><strong>已完成</strong><small>{{ generated_at[:16].replace('T',' ') }} · 每12小时</small></article>
+    <article class="status"><span>最近检查</span><strong>{{ scan_status }}</strong><small>{{ generated_at[:16].replace('T',' ') }} · 每12小时{% if recent_scans %} · 新增 {{ recent_scans[0].new_count }} 条{% endif %}</small></article>
   </section>
   <section>
     <div class="section-title"><div><p class="eyebrow">COMING UP</p><h2>即将开放</h2></div><span class="muted">日期来自公开公告；未披露时刻不补全</span></div>
@@ -47,7 +47,8 @@
     </div>
     <aside>
       <div class="section-title"><div><p class="eyebrow">MONITOR PULSE</p><h2>监控脉搏</h2></div></div>
-      <div class="source-list">{% for s in sources %}<div><i class="{{ 'bad' if s.status == '异常' else 'ok' }}"></i><span><b>{{ s.source_name }}</b><small>{{ s.fetched_at[5:16].replace('T',' ') }} · {{ s.item_count }} 条</small></span><em>{{ s.status }}</em></div>{% else %}<p class="muted">首次云端检查后显示状态</p>{% endfor %}</div>
+      <div class="source-list">{% for s in sources %}<div><i class="{{ 'bad' if s.status == '异常' else 'ok' }}"></i><span><b>{{ s.source_name }}</b><small>{{ s.fetched_at[5:16].replace('T',' ') }} · 扫描 {{ s.item_count }} 条 · 新增 {{ s.new_count or 0 }} 条</small></span><em>{{ s.status }}</em></div>{% else %}<p class="muted">首次云端检查后显示状态</p>{% endfor %}</div>
+      <h3 class="side-head">最近4次扫描</h3><div class="scan-list">{% for scan in recent_scans %}<div><span><b>{{ scan.fetched_at[5:16].replace('T',' ') }}</b><small>扫描 {{ scan.item_count }} 条 · 新增 {{ scan.new_count }} 条</small></span><em class="{{ 'bad' if scan.status != '成功' else '' }}">{{ scan.status }}</em></div>{% else %}<p class="muted">下一次云端检查后开始记录</p>{% endfor %}</div>
       <h3 class="side-head">最近发现</h3><div class="timeline">{% for e in events %}<div><i></i><span><b>{{ e.summary }}</b><small>{{ e.detected_at[5:16].replace('T',' ') }}</small></span></div>{% endfor %}</div>
     </aside>
   </section>

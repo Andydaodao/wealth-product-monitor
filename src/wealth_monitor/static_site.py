@@ -9,7 +9,7 @@ import shutil
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from .database import connect
-from .monitor import now, refresh_all, seed_public_snapshot
+from .monitor import normalize_source_url, now, refresh_all, seed_public_snapshot
 
 ROOT = Path(__file__).resolve().parents[2]
 TEMPLATE_DIR = ROOT / "src" / "wealth_monitor" / "templates"
@@ -29,8 +29,8 @@ STATE_TABLES = {
         "fingerprint",
     ),
     "source_runs": (
-        "id", "source_name", "url", "fetched_at", "status", "http_status",
-        "item_count", "error_message",
+        "id", "scan_id", "source_name", "url", "fetched_at", "status",
+        "http_status", "item_count", "new_count", "error_message",
     ),
 }
 
@@ -44,11 +44,22 @@ def restore_state(path: Path = STATE_PATH) -> None:
             rows = state.get(table, [])
             if not rows:
                 continue
+            prepared_rows = []
+            for row in rows:
+                row = dict(row)
+                if table in {"products", "events"}:
+                    row["product_key"] = row["product_key"].removesuffix("None")
+                    row["source_url"] = normalize_source_url(row["source_url"])
+                if table == "source_runs":
+                    row.setdefault("scan_id", None)
+                    row.setdefault("new_count", 0)
+                    row["url"] = normalize_source_url(row["url"])
+                prepared_rows.append(row)
             names = ",".join(columns)
             placeholders = ",".join("?" for _ in columns)
             db.executemany(
                 f"INSERT OR REPLACE INTO {table} ({names}) VALUES ({placeholders})",
-                [tuple(row.get(column) for column in columns) for row in rows],
+                [tuple(row.get(column) for column in columns) for row in prepared_rows],
             )
 
 
@@ -73,6 +84,12 @@ def render_site(output_dir: Path = OUTPUT_DIR) -> None:
     (output_dir / "static").mkdir(exist_ok=True)
 
     with connect() as db:
+        db.execute(
+            "UPDATE products SET status='ACTIVE' "
+            "WHERE status='UPCOMING' AND open_start_date IS NOT NULL "
+            "AND open_start_date<=?",
+            (now()[:10],),
+        )
         products = [dict(row) for row in db.execute(
             "SELECT * FROM products ORDER BY COALESCE(open_start_date,'9999'), last_seen_at DESC"
         )]
@@ -87,6 +104,21 @@ def render_site(output_dir: Path = OUTPUT_DIR) -> None:
             "JOIN (SELECT source_name,MAX(id) id FROM source_runs GROUP BY source_name) x "
             "ON s.id=x.id ORDER BY s.source_name"
         )]
+        recent_scans = [dict(row) for row in db.execute(
+            "SELECT scan_id,MIN(fetched_at) fetched_at,SUM(item_count) item_count,"
+            "SUM(new_count) new_count,COUNT(*) source_count,"
+            "SUM(CASE WHEN status='异常' THEN 1 ELSE 0 END) error_count "
+            "FROM source_runs WHERE scan_id IS NOT NULL GROUP BY scan_id "
+            "ORDER BY MAX(id) DESC LIMIT 4"
+        )]
+
+    for scan in recent_scans:
+        if scan["error_count"] == 0:
+            scan["status"] = "成功"
+        elif scan["error_count"] == scan["source_count"]:
+            scan["status"] = "异常"
+        else:
+            scan["status"] = "部分异常"
 
     counts = {
         "total": len(products),
@@ -94,6 +126,8 @@ def render_site(output_dir: Path = OUTPUT_DIR) -> None:
         "upcoming": sum(p["status"] == "UPCOMING" for p in products),
     }
     generated_at = max((s["fetched_at"] for s in sources), default=now())
+    latest_scan = recent_scans[0] if recent_scans else None
+    scan_status = latest_scan["status"] if latest_scan else "已完成"
     repository = os.environ.get("GITHUB_REPOSITORY", "")
     actions_url = f"https://github.com/{repository}/actions" if repository else ""
 
@@ -106,8 +140,10 @@ def render_site(output_dir: Path = OUTPUT_DIR) -> None:
         upcoming=upcoming,
         events=events,
         sources=sources,
+        recent_scans=recent_scans,
         counts=counts,
         generated_at=generated_at,
+        scan_status=scan_status,
         actions_url=actions_url,
     )
     (output_dir / "index.html").write_text(index, "utf-8")

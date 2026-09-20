@@ -3,6 +3,7 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 import hashlib
 import re
+from urllib.parse import urlsplit, urlunsplit
 
 from bs4 import BeautifulSoup
 import httpx
@@ -33,6 +34,12 @@ NOTICE_SNAPSHOT = [
 
 def now() -> str:
     return datetime.now(TZ).isoformat(timespec="seconds")
+
+
+def normalize_source_url(url: str) -> str:
+    parts = urlsplit(url)
+    path = re.sub(r"/{2,}", "/", parts.path)
+    return urlunsplit((parts.scheme, parts.netloc, path, parts.query, parts.fragment))
 
 
 def preference(name: str, days: int | None, risk: str | None) -> str:
@@ -104,6 +111,7 @@ def parse_notice_page(html: str) -> list[dict]:
         url = str(link.get("href") or NOTICE_URL)
         if url.startswith("/"):
             url = "https://www.bocwm.cn" + url
+        url = normalize_source_url(url)
         item = {"name": name.strip("“”（）()"), "date": date, "url": url}
         if "发行公告" in title and date is None:
             item["lifecycle_status"] = "UPCOMING"
@@ -120,16 +128,17 @@ def seed_public_snapshot() -> None:
         if not db.execute("SELECT 1 FROM source_runs LIMIT 1").fetchone():
             stamp = now()
             db.executemany(
-                "INSERT INTO source_runs(source_name,url,fetched_at,status,http_status,item_count) VALUES(?,?,?,?,?,?)",
+                "INSERT INTO source_runs(scan_id,source_name,url,fetched_at,status,http_status,item_count,new_count) VALUES(?,?,?,?,?,?,?,?)",
                 [
-                    ("中银理财产品展示（公开快照）", PRODUCT_URL, stamp, "快照", 200, len(PUBLIC_SNAPSHOT)),
-                    ("中银理财产品公告（公开快照）", NOTICE_URL, stamp, "快照", 200, len(NOTICE_SNAPSHOT)),
+                    (None, "中银理财产品展示（公开快照）", PRODUCT_URL, stamp, "快照", 200, len(PUBLIC_SNAPSHOT), 0),
+                    (None, "中银理财产品公告（公开快照）", NOTICE_URL, stamp, "快照", 200, len(NOTICE_SNAPSHOT), 0),
                 ],
             )
 
 
 async def refresh_all() -> dict:
     results = []
+    scan_id = datetime.now(TZ).isoformat(timespec="microseconds")
     async with httpx.AsyncClient(headers=HEADERS, timeout=20, follow_redirects=True) as client:
         for source, url in (("中银理财产品展示", PRODUCT_URL), ("中银理财产品公告", NOTICE_URL)):
             stamp = now()
@@ -139,13 +148,13 @@ async def refresh_all() -> dict:
                 items = list(parse_homepage(response.text)) if url == PRODUCT_URL else parse_notice_page(response.text)
                 new_count = sum(upsert_product(x, source, x.get("url", url)) for x in items)
                 with connect() as db:
-                    db.execute("INSERT INTO source_runs(source_name,url,fetched_at,status,http_status,item_count) VALUES(?,?,?,?,?,?)",
-                               (source, url, stamp, "正常", response.status_code, len(items)))
+                    db.execute("INSERT INTO source_runs(scan_id,source_name,url,fetched_at,status,http_status,item_count,new_count) VALUES(?,?,?,?,?,?,?,?)",
+                               (scan_id, source, url, stamp, "正常", response.status_code, len(items), new_count))
                 results.append({"source": source, "status": "正常", "items": len(items), "new": new_count})
             except Exception as exc:
                 message = str(exc)[:240]
                 with connect() as db:
-                    db.execute("INSERT INTO source_runs(source_name,url,fetched_at,status,item_count,error_message) VALUES(?,?,?,?,?,?)",
-                               (source, url, stamp, "异常", 0, message))
+                    db.execute("INSERT INTO source_runs(scan_id,source_name,url,fetched_at,status,item_count,new_count,error_message) VALUES(?,?,?,?,?,?,?)",
+                               (scan_id, source, url, stamp, "异常", 0, 0, message))
                 results.append({"source": source, "status": "异常", "error": message})
     return {"runs": results, "at": now()}

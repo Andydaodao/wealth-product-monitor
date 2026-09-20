@@ -20,9 +20,10 @@ CREATE TABLE IF NOT EXISTS events (
  fingerprint TEXT UNIQUE NOT NULL
 );
 CREATE TABLE IF NOT EXISTS source_runs (
- id INTEGER PRIMARY KEY, source_name TEXT NOT NULL, url TEXT NOT NULL,
+ id INTEGER PRIMARY KEY, scan_id TEXT, source_name TEXT NOT NULL, url TEXT NOT NULL,
  fetched_at TEXT NOT NULL, status TEXT NOT NULL, http_status INTEGER,
- item_count INTEGER NOT NULL DEFAULT 0, error_message TEXT
+ item_count INTEGER NOT NULL DEFAULT 0, new_count INTEGER NOT NULL DEFAULT 0,
+ error_message TEXT
 );
 CREATE TABLE IF NOT EXISTS watchlist (
  product_key TEXT PRIMARY KEY,
@@ -37,6 +38,15 @@ def connect() -> sqlite3.Connection:
     db = sqlite3.connect(DB_PATH)
     db.row_factory = sqlite3.Row
     db.executescript(SCHEMA)
+    source_run_columns = {
+        row["name"] for row in db.execute("PRAGMA table_info(source_runs)")
+    }
+    if "scan_id" not in source_run_columns:
+        db.execute("ALTER TABLE source_runs ADD COLUMN scan_id TEXT")
+    if "new_count" not in source_run_columns:
+        db.execute(
+            "ALTER TABLE source_runs ADD COLUMN new_count INTEGER NOT NULL DEFAULT 0"
+        )
     db.execute("UPDATE products SET status='UPCOMING' WHERE status='即将开放'")
     db.execute("UPDATE products SET status='ACTIVE' WHERE status='持续运作'")
     db.commit()

@@ -2,6 +2,11 @@ name: 扫描并发布理财雷达
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - data/cloud_state.json
   schedule:
     - cron: "17 1,13 * * *"
 

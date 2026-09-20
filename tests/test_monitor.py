@@ -1,3 +1,5 @@
+import json
+
 from wealth_monitor.monitor import parse_homepage, parse_notice_page, preference, upsert_product
 from wealth_monitor import database
 from wealth_monitor.app import app
@@ -17,11 +19,12 @@ def test_preference_is_only_a_basic_filter():
 
 
 def test_parse_notice_open_date_without_inventing_a_time():
-    html = '<a href="/notice/1.html">“中银理财-稳富（季增益）010”产品A份额开放预告（2026年9月28日开放）</a>'
+    html = '<a href="/html/1//198/197/1.html">“中银理财-稳富（季增益）010”产品A份额开放预告（2026年9月28日开放）</a>'
     product = parse_notice_page(html)[0]
     assert product["name"] == "中银理财-稳富（季增益）010"
     assert product["date"] == "2026-09-28"
     assert "open_time" not in product
+    assert product["url"] == "https://www.bocwm.cn/html/1/198/197/1.html"
 
 
 def test_sparse_refresh_preserves_disclosed_fields_and_deduplicates(monkeypatch, tmp_path):
@@ -76,3 +79,43 @@ def test_static_site_round_trip(monkeypatch, tmp_path):
     assert "静态页面测试产品" in (output_path / "index.html").read_text("utf-8")
     assert (output_path / "products" / "1.html").exists()
     assert (output_path / "static" / "app.css").exists()
+
+
+def test_legacy_state_and_recent_scan_summary(monkeypatch, tmp_path):
+    monkeypatch.setattr(database, "DB_PATH", tmp_path / "scan-history.db")
+    state_path = tmp_path / "legacy-state.json"
+    state_path.write_text(json.dumps({
+        "products": [],
+        "events": [],
+        "source_runs": [{
+            "id": 1,
+            "source_name": "历史来源",
+            "url": "https://www.bocwm.cn/html/1//198/197/index.html",
+            "fetched_at": "2026-09-19T01:00:00+08:00",
+            "status": "正常",
+            "http_status": 200,
+            "item_count": 10,
+            "error_message": None,
+        }],
+    }), "utf-8")
+    restore_state(state_path)
+    with database.connect() as db:
+        db.executemany(
+            "INSERT INTO source_runs(scan_id,source_name,url,fetched_at,status,item_count,new_count) "
+            "VALUES(?,?,?,?,?,?,?)",
+            [
+                ("scan-1", "产品展示", "https://example.com/1", "2026-09-20T09:17:00+08:00", "正常", 9, 2),
+                ("scan-1", "产品公告", "https://example.com/2", "2026-09-20T09:17:01+08:00", "异常", 0, 0),
+            ],
+        )
+
+    output_path = tmp_path / "public"
+    render_site(output_path)
+    page = (output_path / "index.html").read_text("utf-8")
+    assert "部分异常" in page
+    assert "扫描 9 条 · 新增 2 条" in page
+    with database.connect() as db:
+        legacy = db.execute("SELECT scan_id,new_count,url FROM source_runs WHERE id=1").fetchone()
+    assert legacy["scan_id"] is None
+    assert legacy["new_count"] == 0
+    assert legacy["url"] == "https://www.bocwm.cn/html/1/198/197/index.html"
