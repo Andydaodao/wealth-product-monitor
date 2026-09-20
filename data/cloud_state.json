@@ -18,10 +18,10 @@
       "max_scale": null,
       "status": "ACTIVE",
       "preference_label": "符合基础偏好",
-      "source_name": "中银理财产品展示",
-      "source_url": "https://www.bocwm.cn/",
+      "source_name": "中银理财产品展示（公开快照）",
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-20T17:21:29+08:00"
+      "last_seen_at": "2026-09-20T17:29:18+08:00"
     },
     {
       "id": 2,
@@ -41,10 +41,10 @@
       "max_scale": null,
       "status": "ACTIVE",
       "preference_label": "信息不足",
-      "source_name": "中银理财产品展示",
+      "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-20T17:21:29+08:00"
+      "last_seen_at": "2026-09-20T17:29:18+08:00"
     },
     {
       "id": 3,
@@ -64,10 +64,10 @@
       "max_scale": null,
       "status": "ACTIVE",
       "preference_label": "信息不足",
-      "source_name": "中银理财产品展示",
+      "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-20T17:21:29+08:00"
+      "last_seen_at": "2026-09-20T17:29:18+08:00"
     },
     {
       "id": 4,
@@ -87,10 +87,10 @@
       "max_scale": null,
       "status": "ACTIVE",
       "preference_label": "信息不足",
-      "source_name": "中银理财产品展示",
+      "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-20T17:21:29+08:00"
+      "last_seen_at": "2026-09-20T17:29:18+08:00"
     },
     {
       "id": 5,
@@ -110,10 +110,10 @@
       "max_scale": null,
       "status": "ACTIVE",
       "preference_label": "信息不足",
-      "source_name": "中银理财产品展示",
+      "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-20T17:21:29+08:00"
+      "last_seen_at": "2026-09-20T17:29:18+08:00"
     },
     {
       "id": 6,
@@ -133,10 +133,10 @@
       "max_scale": null,
       "status": "ACTIVE",
       "preference_label": "需要进一步研究",
-      "source_name": "中银理财产品展示",
+      "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-20T17:21:29+08:00"
+      "last_seen_at": "2026-09-20T17:29:18+08:00"
     },
     {
       "id": 7,
@@ -159,7 +159,7 @@
       "source_name": "中银理财产品公告（公开快照）",
       "source_url": "https://www.bocwm.cn/html/1/198/197/41315.html",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-20T17:21:26+08:00"
+      "last_seen_at": "2026-09-20T17:29:18+08:00"
     },
     {
       "id": 8,
@@ -182,7 +182,7 @@
       "source_name": "中银理财产品公告（公开快照）",
       "source_url": "https://www.bocwm.cn/html/1/198/197/index.html",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-20T17:21:26+08:00"
+      "last_seen_at": "2026-09-20T17:29:18+08:00"
     },
     {
       "id": 9,
@@ -1829,42 +1829,6 @@
   ],
   "source_runs": [
     {
-      "id": 13,
-      "scan_id": null,
-      "source_name": "中银理财产品展示",
-      "url": "https://www.bocwm.cn/",
-      "fetched_at": "2026-09-14T16:30:51+08:00",
-      "status": "正常",
-      "http_status": 200,
-      "item_count": 9,
-      "new_count": 0,
-      "error_message": null
-    },
-    {
-      "id": 14,
-      "scan_id": null,
-      "source_name": "中银理财产品公告",
-      "url": "https://www.bocwm.cn/html/1/198/197/index.html",
-      "fetched_at": "2026-09-14T16:30:55+08:00",
-      "status": "正常",
-      "http_status": 200,
-      "item_count": 12,
-      "new_count": 0,
-      "error_message": null
-    },
-    {
-      "id": 15,
-      "scan_id": null,
-      "source_name": "中银理财产品展示",
-      "url": "https://www.bocwm.cn/",
-      "fetched_at": "2026-09-14T17:01:02+08:00",
-      "status": "正常",
-      "http_status": 200,
-      "item_count": 9,
-      "new_count": 0,
-      "error_message": null
-    },
-    {
       "id": 16,
       "scan_id": null,
       "source_name": "中银理财产品公告",
@@ -2422,6 +2386,42 @@
       "source_name": "中国银行理财产品净值",
       "url": "https://www.bocwm.cn/webApi/cms/productNetWorth/getNetWorthByCode",
       "fetched_at": "2026-09-20T17:21:31+08:00",
+      "status": "正常",
+      "http_status": 200,
+      "item_count": 4526,
+      "new_count": 0,
+      "error_message": null
+    },
+    {
+      "id": 63,
+      "scan_id": "2026-09-20T17:29:18.293700+08:00",
+      "source_name": "中银理财产品展示",
+      "url": "https://www.bocwm.cn/",
+      "fetched_at": "2026-09-20T17:29:18+08:00",
+      "status": "异常",
+      "http_status": null,
+      "item_count": 0,
+      "new_count": 0,
+      "error_message": ""
+    },
+    {
+      "id": 64,
+      "scan_id": "2026-09-20T17:29:18.293700+08:00",
+      "source_name": "中银理财产品公告",
+      "url": "https://www.bocwm.cn/html/1/198/197/index.html",
+      "fetched_at": "2026-09-20T17:29:19+08:00",
+      "status": "异常",
+      "http_status": null,
+      "item_count": 0,
+      "new_count": 0,
+      "error_message": ""
+    },
+    {
+      "id": 65,
+      "scan_id": "2026-09-20T17:29:18.293700+08:00",
+      "source_name": "中国银行理财产品净值",
+      "url": "https://www.bocwm.cn/webApi/cms/productNetWorth/getNetWorthByCode",
+      "fetched_at": "2026-09-20T17:29:39+08:00",
       "status": "正常",
       "http_status": 200,
       "item_count": 4526,
@@ -10218,7 +10218,7 @@
       "cumulative_nav": "1.000031",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 2,
@@ -10228,7 +10228,7 @@
       "cumulative_nav": "1.000173",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 3,
@@ -10238,7 +10238,7 @@
       "cumulative_nav": "1.000228",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 4,
@@ -10248,7 +10248,7 @@
       "cumulative_nav": "1.000311",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 5,
@@ -10258,7 +10258,7 @@
       "cumulative_nav": "1.000345",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 6,
@@ -10268,7 +10268,7 @@
       "cumulative_nav": "1.000553",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 7,
@@ -10278,7 +10278,7 @@
       "cumulative_nav": "1.000587",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 8,
@@ -10288,7 +10288,7 @@
       "cumulative_nav": "1.000622",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 9,
@@ -10298,7 +10298,7 @@
       "cumulative_nav": "1.000859",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 10,
@@ -10308,7 +10308,7 @@
       "cumulative_nav": "1.000991",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 11,
@@ -10318,7 +10318,7 @@
       "cumulative_nav": "1.001184",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 12,
@@ -10328,7 +10328,7 @@
       "cumulative_nav": "1.001272",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 13,
@@ -10338,7 +10338,7 @@
       "cumulative_nav": "1.001325",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 14,
@@ -10348,7 +10348,7 @@
       "cumulative_nav": "1.001483",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 15,
@@ -10358,7 +10358,7 @@
       "cumulative_nav": "1.001607",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 16,
@@ -10368,7 +10368,7 @@
       "cumulative_nav": "1.001775",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 17,
@@ -10378,7 +10378,7 @@
       "cumulative_nav": "1.001867",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 18,
@@ -10388,7 +10388,7 @@
       "cumulative_nav": "1.001909",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 19,
@@ -10398,7 +10398,7 @@
       "cumulative_nav": "1.002981",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 20,
@@ -10408,7 +10408,7 @@
       "cumulative_nav": "1.003962",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 21,
@@ -10418,7 +10418,7 @@
       "cumulative_nav": "1.004285",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 22,
@@ -10428,7 +10428,7 @@
       "cumulative_nav": "1.004435",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 23,
@@ -10438,7 +10438,7 @@
       "cumulative_nav": "1.004645",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 24,
@@ -10448,7 +10448,7 @@
       "cumulative_nav": "1.004916",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 25,
@@ -10458,7 +10458,7 @@
       "cumulative_nav": "1.005062",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 26,
@@ -10468,7 +10468,7 @@
       "cumulative_nav": "1.005136",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 27,
@@ -10478,7 +10478,7 @@
       "cumulative_nav": "1.005276",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 28,
@@ -10488,7 +10488,7 @@
       "cumulative_nav": "1.005227",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 29,
@@ -10498,7 +10498,7 @@
       "cumulative_nav": "1.005049",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 30,
@@ -10508,7 +10508,7 @@
       "cumulative_nav": "1.004914",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 31,
@@ -10518,7 +10518,7 @@
       "cumulative_nav": "1.004654",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 32,
@@ -10528,7 +10528,7 @@
       "cumulative_nav": "1.004133",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 33,
@@ -10538,7 +10538,7 @@
       "cumulative_nav": "1.004391",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 34,
@@ -10548,7 +10548,7 @@
       "cumulative_nav": "1.004495",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 35,
@@ -10558,7 +10558,7 @@
       "cumulative_nav": "1.004670",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 36,
@@ -10568,7 +10568,7 @@
       "cumulative_nav": "1.004775",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 37,
@@ -10578,7 +10578,7 @@
       "cumulative_nav": "1.004821",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 38,
@@ -10588,7 +10588,7 @@
       "cumulative_nav": "1.004986",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 39,
@@ -10598,7 +10598,7 @@
       "cumulative_nav": "1.005001",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 40,
@@ -10608,7 +10608,7 @@
       "cumulative_nav": "1.005065",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 41,
@@ -10618,7 +10618,7 @@
       "cumulative_nav": "1.005270",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 42,
@@ -10628,7 +10628,7 @@
       "cumulative_nav": "1.005334",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 43,
@@ -10638,7 +10638,7 @@
       "cumulative_nav": "1.005517",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 44,
@@ -10648,7 +10648,7 @@
       "cumulative_nav": "1.005537",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 45,
@@ -10658,7 +10658,7 @@
       "cumulative_nav": "1.006806",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 46,
@@ -10668,7 +10668,7 @@
       "cumulative_nav": "1.006807",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 47,
@@ -10678,7 +10678,7 @@
       "cumulative_nav": "1.006816",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 48,
@@ -10688,7 +10688,7 @@
       "cumulative_nav": "1.007129",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 49,
@@ -10698,7 +10698,7 @@
       "cumulative_nav": "1.007148",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 50,
@@ -10708,7 +10708,7 @@
       "cumulative_nav": "1.007148",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 51,
@@ -10718,7 +10718,7 @@
       "cumulative_nav": "1.007179",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 52,
@@ -10728,7 +10728,7 @@
       "cumulative_nav": "1.008263",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 53,
@@ -10738,7 +10738,7 @@
       "cumulative_nav": "1.008221",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 54,
@@ -10748,7 +10748,7 @@
       "cumulative_nav": "1.008092",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 55,
@@ -10758,7 +10758,7 @@
       "cumulative_nav": "1.009176",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 56,
@@ -10768,7 +10768,7 @@
       "cumulative_nav": "1.008615",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 57,
@@ -10778,7 +10778,7 @@
       "cumulative_nav": "1.008673",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 58,
@@ -10788,7 +10788,7 @@
       "cumulative_nav": "1.008757",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 59,
@@ -10798,7 +10798,7 @@
       "cumulative_nav": "1.008814",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 60,
@@ -10808,7 +10808,7 @@
       "cumulative_nav": "1.008983",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 61,
@@ -10818,7 +10818,7 @@
       "cumulative_nav": "1.009002",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 62,
@@ -10828,7 +10828,7 @@
       "cumulative_nav": "1.009003",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 63,
@@ -10838,7 +10838,7 @@
       "cumulative_nav": "1.009111",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 64,
@@ -10848,7 +10848,7 @@
       "cumulative_nav": "1.010087",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 65,
@@ -10858,7 +10858,7 @@
       "cumulative_nav": "1.009975",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 66,
@@ -10868,7 +10868,7 @@
       "cumulative_nav": "1.010059",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 67,
@@ -10878,7 +10878,7 @@
       "cumulative_nav": "1.010078",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 68,
@@ -10888,7 +10888,7 @@
       "cumulative_nav": "1.010926",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 69,
@@ -10898,7 +10898,7 @@
       "cumulative_nav": "1.010856",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 70,
@@ -10908,7 +10908,7 @@
       "cumulative_nav": "1.011043",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 71,
@@ -10918,7 +10918,7 @@
       "cumulative_nav": "1.011185",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 72,
@@ -10928,7 +10928,7 @@
       "cumulative_nav": "1.011287",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 73,
@@ -10938,7 +10938,7 @@
       "cumulative_nav": "1.011454",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 74,
@@ -10948,7 +10948,7 @@
       "cumulative_nav": "1.011490",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 75,
@@ -10958,7 +10958,7 @@
       "cumulative_nav": "1.011513",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 76,
@@ -10968,7 +10968,7 @@
       "cumulative_nav": "1.011636",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 77,
@@ -10978,7 +10978,7 @@
       "cumulative_nav": "1.011703",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 78,
@@ -10988,7 +10988,7 @@
       "cumulative_nav": "1.011857",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 79,
@@ -10998,7 +10998,7 @@
       "cumulative_nav": "1.012260",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 80,
@@ -11008,7 +11008,7 @@
       "cumulative_nav": "1.012249",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 81,
@@ -11018,7 +11018,7 @@
       "cumulative_nav": "1.012313",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 82,
@@ -11028,7 +11028,7 @@
       "cumulative_nav": "1.012266",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 83,
@@ -11038,7 +11038,7 @@
       "cumulative_nav": "1.012432",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 84,
@@ -11048,7 +11048,7 @@
       "cumulative_nav": "1.012445",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 85,
@@ -11058,7 +11058,7 @@
       "cumulative_nav": "1.012449",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 86,
@@ -11068,7 +11068,7 @@
       "cumulative_nav": "1.012632",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 87,
@@ -11078,7 +11078,7 @@
       "cumulative_nav": "1.013272",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 88,
@@ -11088,7 +11088,7 @@
       "cumulative_nav": "1.013339",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 89,
@@ -11098,7 +11098,7 @@
       "cumulative_nav": "1.013500",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 90,
@@ -11108,7 +11108,7 @@
       "cumulative_nav": "1.013517",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 91,
@@ -11118,7 +11118,7 @@
       "cumulative_nav": "1.013625",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 92,
@@ -11128,7 +11128,7 @@
       "cumulative_nav": "1.013701",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 93,
@@ -11138,7 +11138,7 @@
       "cumulative_nav": "1.013872",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 94,
@@ -11148,7 +11148,7 @@
       "cumulative_nav": "1.013937",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 95,
@@ -11158,7 +11158,7 @@
       "cumulative_nav": "1.014003",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 96,
@@ -11168,7 +11168,7 @@
       "cumulative_nav": "1.014064",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 97,
@@ -11178,7 +11178,7 @@
       "cumulative_nav": "1.014123",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 98,
@@ -11188,7 +11188,7 @@
       "cumulative_nav": "1.014255",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 99,
@@ -11198,7 +11198,7 @@
       "cumulative_nav": "1.014320",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 100,
@@ -11208,7 +11208,7 @@
       "cumulative_nav": "1.014450",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 1904,
@@ -11218,7 +11218,7 @@
       "cumulative_nav": "1.014577",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
-      "source_url": "https://www.bocwm.cn/"
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
       "id": 101,
