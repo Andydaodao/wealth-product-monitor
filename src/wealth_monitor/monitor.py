@@ -59,7 +59,7 @@ def preference(name: str, days: int | None, risk: str | None) -> str:
 
 def upsert_product(item: dict, source_name: str, source_url: str) -> bool:
     stamp = now()
-    key = item.get("code") or f"{item['name']}|{item.get('date', '')}"
+    key = item.get("product_key") or item.get("code") or f"{item['name']}|{item.get('date', '')}"
     with connect() as db:
         old = db.execute("SELECT * FROM products WHERE product_key=?", (key,)).fetchone()
         values = {
@@ -116,10 +116,34 @@ def parse_notice_page(html: str) -> list[dict]:
             url = "https://www.bocwm.cn" + url
         url = normalize_source_url(url)
         item = {"name": name.strip("“”（）()"), "date": date, "url": url}
+        item["product_key"] = f"{item['name']}|{date or ''}"
         if "发行公告" in title and date is None:
             item["lifecycle_status"] = "UPCOMING"
         products[f"{item['name']}|{date or ''}"] = item
     return list(products.values())
+
+
+def parse_notice_detail(html: str) -> str | None:
+    """Extract one unambiguous product code disclosed in an announcement."""
+    text = BeautifulSoup(html, "html.parser").get_text(" ", strip=True)
+    codes = {
+        code.upper()
+        for code in re.findall(r"产品代码\s*[:：]?\s*([A-Z][A-Z0-9]{4,})", text, re.IGNORECASE)
+    }
+    return next(iter(codes)) if len(codes) == 1 else None
+
+
+async def enrich_notice_codes(client: httpx.AsyncClient, items: list[dict]) -> None:
+    """Add codes found directly on the small set of radar announcement pages."""
+    for item in items:
+        try:
+            response = await client.get(item["url"])
+            response.raise_for_status()
+        except httpx.HTTPError:
+            continue
+        code = parse_notice_detail(response.text)
+        if code:
+            item["code"] = code
 
 
 def _number(value: str) -> str | None:
@@ -241,7 +265,11 @@ async def refresh_all() -> dict:
             try:
                 response = await client.get(url)
                 response.raise_for_status()
-                items = list(parse_homepage(response.text)) if url == PRODUCT_URL else parse_notice_page(response.text)
+                if url == PRODUCT_URL:
+                    items = list(parse_homepage(response.text))
+                else:
+                    items = parse_notice_page(response.text)
+                    await enrich_notice_codes(client, items)
                 new_count = sum(upsert_product(x, source, x.get("url", url)) for x in items)
                 with connect() as db:
                     db.execute("INSERT INTO source_runs(scan_id,source_name,url,fetched_at,status,http_status,item_count,new_count) VALUES(?,?,?,?,?,?,?,?)",

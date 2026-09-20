@@ -5,12 +5,18 @@
   const catalog = JSON.parse(document.querySelector("#holdings-catalog").textContent);
   const catalogByCode = new Map(catalog.map((product) => [product.code.toUpperCase(), product]));
   const form = document.querySelector("#holding-form");
+  const productSearch = document.querySelector("#product-search");
+  const productOptions = document.querySelector("#product-options");
+  const productResultCount = document.querySelector("#product-result-count");
+  const productOptionsMore = document.querySelector("#product-options-more");
   const codeInput = document.querySelector("#product-code");
   const nameInput = document.querySelector("#product-name");
   const typeInput = document.querySelector("#transaction-type");
   const dateInput = document.querySelector("#transaction-date");
   const sharesInput = document.querySelector("#transaction-shares");
   const message = document.querySelector("#form-message");
+  const DEFAULT_PRODUCT_LIMIT = 6;
+  let showAllProducts = false;
   let state = loadState();
 
   function localDate() {
@@ -142,6 +148,46 @@
     })[character]);
   }
 
+  function productDataStatus(product) {
+    const rows = normalizedNav(product);
+    if (!rows.length) return "暂无公开净值";
+    const latest = rows.at(-1);
+    if (rows.length === 1) return `1 个净值点 · ${latest.date}`;
+    return `${rows.length} 个净值点 · 更新至 ${latest.date}`;
+  }
+
+  function renderProductOptions() {
+    const query = productSearch.value.trim().toLocaleLowerCase("zh-CN");
+    const matches = catalog.filter((product) => !query
+      || product.code.toLocaleLowerCase("zh-CN").includes(query)
+      || product.name.toLocaleLowerCase("zh-CN").includes(query));
+    const visible = query || showAllProducts ? matches : matches.slice(0, DEFAULT_PRODUCT_LIMIT);
+    const selectedCode = normalizeCode(codeInput.value);
+
+    productResultCount.textContent = query ? `找到 ${matches.length} 个` : `共 ${catalog.length} 个`;
+    if (!visible.length) {
+      productOptions.innerHTML = '<p class="product-options-empty">没有匹配的可计算产品，仍可在下方手动输入代码和名称。</p>';
+    } else {
+      productOptions.innerHTML = visible.map((product) => `<button type="button" class="product-option${selectedCode === normalizeCode(product.code) ? " selected" : ""}" data-product-code="${escapeHtml(product.code)}">
+        <span><b>${escapeHtml(product.name)}</b><small>${escapeHtml(product.code)}</small></span>
+        <em>${escapeHtml(productDataStatus(product))}</em>
+      </button>`).join("");
+    }
+
+    productOptionsMore.hidden = Boolean(query) || catalog.length <= DEFAULT_PRODUCT_LIMIT;
+    productOptionsMore.textContent = showAllProducts ? "收起产品列表" : `查看全部 ${catalog.length} 个可计算产品`;
+  }
+
+  function selectProduct(code) {
+    const product = catalogByCode.get(normalizeCode(code));
+    if (!product) return;
+    codeInput.value = product.code;
+    nameInput.value = product.name;
+    productSearch.value = "";
+    renderProductOptions();
+    sharesInput.focus();
+  }
+
   function renderPositions() {
     const codes = [...new Set(state.transactions.map((item) => item.code))];
     const positions = codes.map(calculateProduct).filter((item) => item.shares > 0.000001);
@@ -213,9 +259,15 @@
   function fillProductName() {
     const product = catalogByCode.get(normalizeCode(codeInput.value));
     nameInput.value = product ? product.name : "";
+    renderProductOptions();
   }
 
   codeInput.addEventListener("input", fillProductName);
+  productSearch.addEventListener("input", renderProductOptions);
+  productOptionsMore.addEventListener("click", () => {
+    showAllProducts = !showAllProducts;
+    renderProductOptions();
+  });
   dateInput.value = localDate();
   const requestedCode = normalizeCode(new URLSearchParams(location.search).get("code") || "");
   if (requestedCode) {
@@ -252,6 +304,11 @@
   });
 
   document.addEventListener("click", (event) => {
+    const productButton = event.target.closest("[data-product-code]");
+    if (productButton) {
+      selectProduct(productButton.dataset.productCode);
+      return;
+    }
     const positionButton = event.target.closest("[data-position-code]");
     if (positionButton) {
       codeInput.value = positionButton.dataset.positionCode;
@@ -277,5 +334,6 @@
     render();
   });
 
+  renderProductOptions();
   render();
 })();

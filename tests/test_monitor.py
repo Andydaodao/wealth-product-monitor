@@ -3,6 +3,7 @@ import json
 from wealth_monitor.monitor import (
     parse_homepage,
     parse_nav_api,
+    parse_notice_detail,
     parse_notice_page,
     preference,
     seed_public_snapshot,
@@ -12,7 +13,7 @@ from wealth_monitor.monitor import (
 from wealth_monitor.performance import calculate_performance
 from wealth_monitor import database
 from wealth_monitor.app import app
-from wealth_monitor.static_site import render_site, restore_state, save_state
+from wealth_monitor.static_site import load_holdings_catalog, render_site, restore_state, save_state
 from fastapi.testclient import TestClient
 
 
@@ -34,6 +35,16 @@ def test_parse_notice_open_date_without_inventing_a_time():
     assert product["date"] == "2026-09-28"
     assert "open_time" not in product
     assert product["url"] == "https://www.bocwm.cn/html/1/198/197/1.html"
+
+
+def test_parse_product_code_from_notice_detail():
+    html = "<table><tr><td>产品代码</td><td>WFZQSYK0207</td></tr></table>"
+    assert parse_notice_detail(html) == "WFZQSYK0207"
+
+
+def test_ambiguous_notice_codes_are_not_guessed():
+    html = "<p>产品代码 ABC123</p><p>产品代码 XYZ789</p>"
+    assert parse_notice_detail(html) is None
 
 
 def test_sparse_refresh_preserves_disclosed_fields_and_deduplicates(monkeypatch, tmp_path):
@@ -186,6 +197,26 @@ def test_local_holdings_page_contains_public_nav_data(monkeypatch, tmp_path):
     assert "本地持仓测试产品" in response.text
     assert "1.0010" in response.text
     assert "持仓仅保存在当前浏览器" in response.text
+
+
+def test_holdings_catalog_only_lists_active_products_with_history(monkeypatch, tmp_path):
+    monkeypatch.setattr(database, "DB_PATH", tmp_path / "catalog.db")
+    upsert_product({"code": "READY2", "name": "净值充足"}, "离线样例", "https://example.com")
+    upsert_product({"code": "ONLY1", "name": "只有一个净值"}, "离线样例", "https://example.com")
+    upsert_product(
+        {"code": "FUTURE2", "name": "尚未发售", "date": "2099-01-01"},
+        "离线样例",
+        "https://example.com",
+    )
+    upsert_nav_rows([
+        {"product_code": "READY2", "nav_date": "2026-09-18", "unit_nav": "1.0000", "cumulative_nav": "1.0000", "ten_thousand_income": None, "seven_day_annualized": None, "source_url": "https://example.com/nav"},
+        {"product_code": "READY2", "nav_date": "2026-09-19", "unit_nav": "1.0010", "cumulative_nav": "1.0010", "ten_thousand_income": None, "seven_day_annualized": None, "source_url": "https://example.com/nav"},
+        {"product_code": "ONLY1", "nav_date": "2026-09-19", "unit_nav": "1.0010", "cumulative_nav": "1.0010", "ten_thousand_income": None, "seven_day_annualized": None, "source_url": "https://example.com/nav"},
+        {"product_code": "FUTURE2", "nav_date": "2026-09-18", "unit_nav": "1.0000", "cumulative_nav": "1.0000", "ten_thousand_income": None, "seven_day_annualized": None, "source_url": "https://example.com/nav"},
+        {"product_code": "FUTURE2", "nav_date": "2026-09-19", "unit_nav": "1.0010", "cumulative_nav": "1.0010", "ten_thousand_income": None, "seven_day_annualized": None, "source_url": "https://example.com/nav"},
+    ])
+
+    assert [product["code"] for product in load_holdings_catalog()] == ["READY2"]
 
 
 def test_legacy_state_and_recent_scan_summary(monkeypatch, tmp_path):

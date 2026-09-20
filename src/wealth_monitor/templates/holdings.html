@@ -31,8 +31,13 @@
     <article class="holding-form-card">
       <div class="section-title"><div><p class="eyebrow">POSITION CHANGE</p><h2>记录份额变动</h2></div></div>
       <form id="holding-form" class="holding-form">
-        <label><span>产品代码</span><input id="product-code" list="product-options" autocomplete="off" placeholder="例如 CYQWFCZ7D2A" required></label>
-        <datalist id="product-options">{% for product in catalog %}<option value="{{ product.code }}">{{ product.name }}</option>{% endfor %}</datalist>
+        <section class="product-picker" aria-labelledby="product-picker-title">
+          <div class="product-picker-head"><b id="product-picker-title">雷达中可计算收益的产品</b><span id="product-result-count"></span></div>
+          <input id="product-search" type="search" autocomplete="off" placeholder="输入产品名称或代码搜索" aria-label="搜索已收录产品">
+          <div id="product-options" class="product-options" aria-live="polite"></div>
+          <button id="product-options-more" class="product-options-more" type="button" hidden></button>
+        </section>
+        <label><span>产品代码</span><input id="product-code" autocomplete="off" placeholder="选择上方产品或手动输入" required></label>
         <label><span>产品名称</span><input id="product-name" placeholder="匹配成功后自动填写"></label>
         <div class="form-row">
           <label><span>变动类型</span><select id="transaction-type"><option value="BUY">买入 / 增加份额</option><option value="SELL">赎回 / 减少份额</option></select></label>
