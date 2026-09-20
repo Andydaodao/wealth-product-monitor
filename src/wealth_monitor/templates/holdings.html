@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>我的持仓 · 中银理财雷达</title>
+  <link rel="stylesheet" href="{{ asset_prefix }}static/app.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="{{ home_href }}"><span class="mark">中</span><span><b>中银理财雷达</b><small>返回产品观察池</small></span></a>
+  <div class="live"><i></i>持仓仅保存在当前浏览器</div>
+</header>
+<main class="holdings-page">
+  <a class="back" href="{{ home_href }}">← 返回监控台</a>
+  <section class="holdings-hero">
+    <div><p class="eyebrow">LOCAL PORTFOLIO</p><h1>我的持仓</h1><p class="lead">记录份额变动，根据公开净值估算各产品最新净值日收益。数据不会上传到 GitHub 或银行。</p></div>
+    <span class="local-badge">仅此设备 · 仅此浏览器</span>
+  </section>
+
+  <section class="metrics holdings-metrics">
+    <article><span>持仓产品</span><strong id="holding-count">0</strong><small>当前份额大于 0</small></article>
+    <article><span>持仓估值</span><strong id="portfolio-value">—</strong><small>人民币产品估算</small></article>
+    <article><span>最新披露收益</span><strong id="latest-profit">—</strong><small id="latest-profit-date">等待净值</small></article>
+    <article class="status"><span>本地记录</span><strong id="transaction-count">0 笔</strong><small>买入和赎回变动</small></article>
+  </section>
+
+  <section class="local-notice"><b>隐私说明</b><span>持仓记录保存在浏览器 localStorage。换设备或清除网站数据后不会自动恢复；本版暂不加密，请勿在共用设备录入。</span></section>
+
+  <section class="holding-layout">
+    <article class="holding-form-card">
+      <div class="section-title"><div><p class="eyebrow">POSITION CHANGE</p><h2>记录份额变动</h2></div></div>
+      <form id="holding-form" class="holding-form">
+        <label><span>产品代码</span><input id="product-code" list="product-options" autocomplete="off" placeholder="例如 CYQWFCZ7D2A" required></label>
+        <datalist id="product-options">{% for product in catalog %}<option value="{{ product.code }}">{{ product.name }}</option>{% endfor %}</datalist>
+        <label><span>产品名称</span><input id="product-name" placeholder="匹配成功后自动填写"></label>
+        <div class="form-row">
+          <label><span>变动类型</span><select id="transaction-type"><option value="BUY">买入 / 增加份额</option><option value="SELL">赎回 / 减少份额</option></select></label>
+          <label><span>生效日期</span><input id="transaction-date" type="date" required></label>
+        </div>
+        <label><span>变动份额</span><input id="transaction-shares" type="number" min="0.01" step="0.01" inputmode="decimal" placeholder="请输入正数" required></label>
+        <button type="submit">保存到当前浏览器</button>
+        <p id="form-message" class="form-message" role="status"></p>
+      </form>
+    </article>
+
+    <article class="holding-guide">
+      <p class="eyebrow">HOW IT WORKS</p><h2>使用方法</h2>
+      <ol><li>第一次买入时录入产品代码、日期和份额。</li><li>追加买入或部分赎回时，再记录一笔变动。</li><li>GitHub Actions 更新公开净值后，重新打开或刷新本页即可自动重算。</li></ol>
+      <p>不在当前数据池中的产品也可以先保存。云端匹配到该产品的公开净值后，本页会自动开始计算。</p>
+    </article>
+  </section>
+
+  <section class="positions-section">
+    <div class="section-title"><div><p class="eyebrow">CURRENT POSITIONS</p><h2>当前持仓</h2></div><span id="valuation-note" class="muted"></span></div>
+    <div id="positions" class="positions-grid"></div>
+    <div id="positions-empty" class="empty">尚未记录持仓。在上方录入第一笔买入后，这里会显示估值和最新净值日收益。</div>
+  </section>
+
+  <section class="transactions-section">
+    <div class="section-title"><div><p class="eyebrow">LOCAL LEDGER</p><h2>份额变动记录</h2></div></div>
+    <div class="table-wrap"><table><thead><tr><th>生效日期</th><th>产品</th><th>类型</th><th>份额</th><th></th></tr></thead><tbody id="transaction-rows"></tbody></table></div>
+  </section>
+</main>
+<footer>收益按公开净值和本地份额估算，不含申赎费用、税费及未披露分红，不作为银行对账凭证。</footer>
+<script id="holdings-catalog" type="application/json">{{ catalog|tojson }}</script>
+<script src="{{ asset_prefix }}static/holdings.js"></script>
+</body>
+</html>

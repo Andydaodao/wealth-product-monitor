@@ -162,6 +162,30 @@ def test_static_site_round_trip(monkeypatch, tmp_path):
     assert "折算年化" in (output_path / "products" / "1.html").read_text("utf-8")
     assert "+1.00%" in (output_path / "products" / "1.html").read_text("utf-8")
     assert (output_path / "static" / "app.css").exists()
+    holdings_page = (output_path / "holdings.html").read_text("utf-8")
+    assert "我的持仓" in holdings_page
+    assert "P3" in holdings_page
+    assert "1.0100" in holdings_page
+    assert (output_path / "static" / "holdings.js").exists()
+
+
+def test_local_holdings_page_contains_public_nav_data(monkeypatch, tmp_path):
+    monkeypatch.setattr(database, "DB_PATH", tmp_path / "holdings.db")
+    upsert_product(
+        {"code": "LOCAL1", "name": "本地持仓测试产品"},
+        "离线样例",
+        "https://example.com",
+    )
+    upsert_nav_rows([
+        {"product_code": "LOCAL1", "nav_date": "2026-09-18", "unit_nav": "1.0000", "cumulative_nav": "1.0000", "ten_thousand_income": None, "seven_day_annualized": None, "source_url": "https://example.com/nav"},
+        {"product_code": "LOCAL1", "nav_date": "2026-09-19", "unit_nav": "1.0010", "cumulative_nav": "1.0010", "ten_thousand_income": None, "seven_day_annualized": None, "source_url": "https://example.com/nav"},
+    ])
+
+    response = TestClient(app).get("/holdings")
+    assert response.status_code == 200
+    assert "本地持仓测试产品" in response.text
+    assert "1.0010" in response.text
+    assert "持仓仅保存在当前浏览器" in response.text
 
 
 def test_legacy_state_and_recent_scan_summary(monkeypatch, tmp_path):

@@ -11,6 +11,7 @@ from fastapi.templating import Jinja2Templates
 from .database import connect
 from .config import CONFIG
 from .monitor import refresh_all, seed_public_snapshot
+from .static_site import load_holdings_catalog
 
 ROOT = Path(__file__).resolve().parents[2]
 templates = Jinja2Templates(directory=ROOT / "src" / "wealth_monitor" / "templates")
@@ -108,3 +109,15 @@ def toggle_watch(product_id: int):
 def products_api():
     with connect() as db:
         return [dict(row) for row in db.execute("SELECT * FROM products ORDER BY last_seen_at DESC")]
+
+
+@app.get("/holdings", response_class=HTMLResponse)
+def holdings(request: Request):
+    catalog = load_holdings_catalog()
+    for item in catalog:
+        item["detail_url"] = f"/products/{item['id']}"
+    return templates.TemplateResponse(request, "holdings.html", {
+        "catalog": catalog,
+        "home_href": "/",
+        "asset_prefix": "/",
+    })

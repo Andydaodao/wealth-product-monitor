@@ -40,6 +40,45 @@ STATE_TABLES = {
 }
 
 
+def load_holdings_catalog() -> list[dict]:
+    """Return public product and NAV data used by the browser-only holdings page."""
+    with connect() as db:
+        products = [dict(row) for row in db.execute(
+            "SELECT id,product_code,product_name FROM products "
+            "WHERE product_code IS NOT NULL ORDER BY last_seen_at DESC"
+        )]
+        nav_rows = [dict(row) for row in db.execute(
+            "SELECT product_code,nav_date,unit_nav,cumulative_nav,"
+            "ten_thousand_income,seven_day_annualized "
+            "FROM nav_history ORDER BY product_code,nav_date"
+        )]
+
+    nav_by_code: dict[str, list[dict]] = {}
+    for row in nav_rows:
+        nav_by_code.setdefault(row["product_code"].upper(), []).append({
+            "date": row["nav_date"],
+            "unit_nav": row["unit_nav"],
+            "cumulative_nav": row["cumulative_nav"],
+            "ten_thousand_income": row["ten_thousand_income"],
+            "seven_day_annualized": row["seven_day_annualized"],
+        })
+
+    catalog = []
+    seen = set()
+    for product in products:
+        code = product["product_code"].upper()
+        if code in seen:
+            continue
+        seen.add(code)
+        catalog.append({
+            "id": product["id"],
+            "code": code,
+            "name": product["product_name"],
+            "nav": nav_by_code.get(code, []),
+        })
+    return catalog
+
+
 def restore_state(path: Path = STATE_PATH) -> None:
     if not path.exists():
         return
@@ -151,42 +190,3 @@ def render_site(output_dir: Path = OUTPUT_DIR) -> None:
         products=products,
         upcoming=upcoming,
         events=events,
-        sources=sources,
-        recent_scans=recent_scans,
-        counts=counts,
-        generated_at=generated_at,
-        scan_status=scan_status,
-        actions_url=actions_url,
-    )
-    (output_dir / "index.html").write_text(index, "utf-8")
-
-    detail_template = environment.get_template("static_detail.html")
-    for product in products:
-        product_events = [e for e in events if e["product_key"] == product["product_key"]]
-        product_nav = [row for row in nav_rows if row["product_code"] == product["product_code"]]
-        detail = detail_template.render(
-            product=product,
-            events=product_events,
-            performance=calculate_performance(product_nav),
-        )
-        (output_dir / "products" / f"{product['id']}.html").write_text(detail, "utf-8")
-
-    shutil.copy2(ROOT / "src" / "wealth_monitor" / "static" / "app.css", output_dir / "static" / "app.css")
-
-
-async def build() -> dict:
-    restore_state()
-    seed_public_snapshot()
-    result = await refresh_all()
-    save_state()
-    render_site()
-    return result
-
-
-def main() -> None:
-    result = asyncio.run(build())
-    print(json.dumps(result))
-
-
-if __name__ == "__main__":
-    main()
