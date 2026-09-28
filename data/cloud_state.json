@@ -21,7 +21,7 @@
       "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/html/1/4/9494.html",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-28T14:20:54+08:00"
+      "last_seen_at": "2026-09-29T04:00:11+08:00"
     },
     {
       "id": 2,
@@ -44,7 +44,7 @@
       "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-28T14:20:54+08:00"
+      "last_seen_at": "2026-09-29T04:00:11+08:00"
     },
     {
       "id": 3,
@@ -64,10 +64,10 @@
       "max_scale": null,
       "status": "ACTIVE",
       "preference_label": "信息不足",
-      "source_name": "中银理财产品展示",
+      "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-28T14:20:57+08:00"
+      "last_seen_at": "2026-09-29T04:00:11+08:00"
     },
     {
       "id": 4,
@@ -87,10 +87,10 @@
       "max_scale": null,
       "status": "ACTIVE",
       "preference_label": "信息不足",
-      "source_name": "中银理财产品展示",
+      "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-28T14:20:57+08:00"
+      "last_seen_at": "2026-09-29T04:00:11+08:00"
     },
     {
       "id": 5,
@@ -110,10 +110,10 @@
       "max_scale": null,
       "status": "ACTIVE",
       "preference_label": "信息不足",
-      "source_name": "中银理财产品展示",
+      "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-28T14:20:57+08:00"
+      "last_seen_at": "2026-09-29T04:00:11+08:00"
     },
     {
       "id": 6,
@@ -133,10 +133,10 @@
       "max_scale": null,
       "status": "ACTIVE",
       "preference_label": "需要进一步研究",
-      "source_name": "中银理财产品展示",
+      "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-28T14:20:57+08:00"
+      "last_seen_at": "2026-09-29T04:00:11+08:00"
     },
     {
       "id": 7,
@@ -159,7 +159,7 @@
       "source_name": "中银理财产品公告（公开快照）",
       "source_url": "https://www.bocwm.cn/html/1/198/197/41315.html",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-28T14:20:54+08:00"
+      "last_seen_at": "2026-09-29T04:00:11+08:00"
     },
     {
       "id": 8,
@@ -182,7 +182,7 @@
       "source_name": "中银理财产品公告（公开快照）",
       "source_url": "https://www.bocwm.cn/html/1/198/197/index.html",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-09-28T14:20:54+08:00"
+      "last_seen_at": "2026-09-29T04:00:11+08:00"
     },
     {
       "id": 9,
@@ -2469,42 +2469,6 @@
   ],
   "source_runs": [
     {
-      "id": 64,
-      "scan_id": "2026-09-20T17:29:18.293700+08:00",
-      "source_name": "中银理财产品公告",
-      "url": "https://www.bocwm.cn/html/1/198/197/index.html",
-      "fetched_at": "2026-09-20T17:29:19+08:00",
-      "status": "异常",
-      "http_status": null,
-      "item_count": 0,
-      "new_count": 0,
-      "error_message": ""
-    },
-    {
-      "id": 65,
-      "scan_id": "2026-09-20T17:29:18.293700+08:00",
-      "source_name": "中国银行理财产品净值",
-      "url": "https://www.bocwm.cn/webApi/cms/productNetWorth/getNetWorthByCode",
-      "fetched_at": "2026-09-20T17:29:39+08:00",
-      "status": "正常",
-      "http_status": 200,
-      "item_count": 4526,
-      "new_count": 0,
-      "error_message": null
-    },
-    {
-      "id": 66,
-      "scan_id": "2026-09-21T00:41:47.725818+08:00",
-      "source_name": "中银理财产品展示",
-      "url": "https://www.bocwm.cn/",
-      "fetched_at": "2026-09-21T00:41:47+08:00",
-      "status": "正常",
-      "http_status": 200,
-      "item_count": 9,
-      "new_count": 0,
-      "error_message": null
-    },
-    {
       "id": 67,
       "scan_id": "2026-09-21T00:41:47.725818+08:00",
       "source_name": "中银理财产品公告",
@@ -3065,6 +3029,42 @@
       "status": "正常",
       "http_status": 200,
       "item_count": 6515,
+      "new_count": 0,
+      "error_message": null
+    },
+    {
+      "id": 114,
+      "scan_id": "2026-09-29T04:00:11.651962+08:00",
+      "source_name": "中银理财产品展示",
+      "url": "https://www.bocwm.cn/",
+      "fetched_at": "2026-09-29T04:00:11+08:00",
+      "status": "异常",
+      "http_status": null,
+      "item_count": 0,
+      "new_count": 0,
+      "error_message": ""
+    },
+    {
+      "id": 115,
+      "scan_id": "2026-09-29T04:00:11.651962+08:00",
+      "source_name": "中银理财产品公告",
+      "url": "https://www.bocwm.cn/html/1/198/197/index.html",
+      "fetched_at": "2026-09-29T04:00:12+08:00",
+      "status": "异常",
+      "http_status": null,
+      "item_count": 0,
+      "new_count": 0,
+      "error_message": ""
+    },
+    {
+      "id": 116,
+      "scan_id": "2026-09-29T04:00:11.651962+08:00",
+      "source_name": "中国银行理财产品净值",
+      "url": "https://www.bocwm.cn/webApi/cms/productNetWorth/getNetWorthByCode",
+      "fetched_at": "2026-09-29T04:00:13+08:00",
+      "status": "正常",
+      "http_status": 200,
+      "item_count": 6525,
       "new_count": 0,
       "error_message": null
     }
@@ -15781,6 +15781,16 @@
       "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
+      "id": 6678,
+      "product_code": "CYQWFCZ7D2A",
+      "nav_date": "2026-09-23",
+      "unit_nav": "1.015074",
+      "cumulative_nav": "1.015074",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
+    },
+    {
       "id": 101,
       "product_code": "CYQWFXYJX180A",
       "nav_date": "2025-09-11",
@@ -18276,6 +18286,16 @@
       "nav_date": "2026-09-22",
       "unit_nav": "1.040458",
       "cumulative_nav": "1.040458",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
+      "id": 6679,
+      "product_code": "CYQWFXYJX180A",
+      "nav_date": "2026-09-23",
+      "unit_nav": "1.040514",
+      "cumulative_nav": "1.040514",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/"
@@ -20811,6 +20831,16 @@
       "source_url": "https://www.bocwm.cn/"
     },
     {
+      "id": 6680,
+      "product_code": "CYQWFXYJX30D3A",
+      "nav_date": "2026-09-23",
+      "unit_nav": "1.039460",
+      "cumulative_nav": "1.039460",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
       "id": 596,
       "product_code": "CYQWFZQHYLD90DA",
       "nav_date": "2025-11-21",
@@ -22856,6 +22886,16 @@
       "nav_date": "2026-09-22",
       "unit_nav": "1.044415",
       "cumulative_nav": "1.044415",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
+      "id": 6681,
+      "product_code": "CYQWFZQHYLD90DA",
+      "nav_date": "2026-09-23",
+      "unit_nav": "1.044454",
+      "cumulative_nav": "1.044454",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/"
@@ -25161,6 +25201,16 @@
       "source_url": "https://www.bocwm.cn/"
     },
     {
+      "id": 6682,
+      "product_code": "CYQWFZQQQPZ30D2A",
+      "nav_date": "2026-09-23",
+      "unit_nav": "1.046806",
+      "cumulative_nav": "1.046806",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
       "id": 1023,
       "product_code": "CYQWFZQQQPZ60D2A",
       "nav_date": "2025-10-24",
@@ -27411,6 +27461,16 @@
       "source_url": "https://www.bocwm.cn/"
     },
     {
+      "id": 6683,
+      "product_code": "CYQWFZQQQPZ60D2A",
+      "nav_date": "2026-09-23",
+      "unit_nav": "1.034840",
+      "cumulative_nav": "1.034840",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
       "id": 6526,
       "product_code": "CYQWFZQQQPZ90D5A",
       "nav_date": "2026-02-06",
@@ -28926,6 +28986,16 @@
       "nav_date": "2026-09-22",
       "unit_nav": "1.030069",
       "cumulative_nav": "1.030069",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
+      "id": 6684,
+      "product_code": "CYQWFZQQQPZ90D5A",
+      "nav_date": "2026-09-23",
+      "unit_nav": "1.029991",
+      "cumulative_nav": "1.029991",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/"
@@ -31031,6 +31101,16 @@
       "source_url": "https://www.bocwm.cn/"
     },
     {
+      "id": 6685,
+      "product_code": "CYQWFZQZSGZ14D2A",
+      "nav_date": "2026-09-23",
+      "unit_nav": "1.047515",
+      "cumulative_nav": "1.047515",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
       "id": 1450,
       "product_code": "CYQWFZQZSLD365DA",
       "nav_date": "2026-03-06",
@@ -32406,6 +32486,16 @@
       "nav_date": "2026-09-22",
       "unit_nav": "1.030006",
       "cumulative_nav": "1.030006",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
+      "id": 6686,
+      "product_code": "CYQWFZQZSLD365DA",
+      "nav_date": "2026-09-23",
+      "unit_nav": "1.030013",
+      "cumulative_nav": "1.030013",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/"
@@ -35646,6 +35736,16 @@
       "nav_date": "2026-09-22",
       "unit_nav": "1.045363",
       "cumulative_nav": "1.045363",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
+      "id": 6687,
+      "product_code": "FCYQZQ368DA",
+      "nav_date": "2026-09-23",
+      "unit_nav": "1.045474",
+      "cumulative_nav": "1.045474",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/"
