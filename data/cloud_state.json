@@ -21,7 +21,7 @@
       "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/html/1/4/9494.html",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-11-05T04:18:00+08:00"
+      "last_seen_at": "2026-11-05T15:43:44+08:00"
     },
     {
       "id": 2,
@@ -44,7 +44,7 @@
       "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-11-05T04:18:00+08:00"
+      "last_seen_at": "2026-11-05T15:43:44+08:00"
     },
     {
       "id": 3,
@@ -67,7 +67,7 @@
       "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-11-05T04:18:00+08:00"
+      "last_seen_at": "2026-11-05T15:43:44+08:00"
     },
     {
       "id": 4,
@@ -90,7 +90,7 @@
       "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-11-05T04:18:00+08:00"
+      "last_seen_at": "2026-11-05T15:43:44+08:00"
     },
     {
       "id": 5,
@@ -113,7 +113,7 @@
       "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-11-05T04:18:00+08:00"
+      "last_seen_at": "2026-11-05T15:43:44+08:00"
     },
     {
       "id": 6,
@@ -136,7 +136,7 @@
       "source_name": "中银理财产品展示（公开快照）",
       "source_url": "https://www.bocwm.cn/",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-11-05T04:18:00+08:00"
+      "last_seen_at": "2026-11-05T15:43:44+08:00"
     },
     {
       "id": 7,
@@ -159,7 +159,7 @@
       "source_name": "中银理财产品公告（公开快照）",
       "source_url": "https://www.bocwm.cn/html/1/198/197/41315.html",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-11-05T04:18:00+08:00"
+      "last_seen_at": "2026-11-05T15:43:44+08:00"
     },
     {
       "id": 8,
@@ -182,7 +182,7 @@
       "source_name": "中银理财产品公告（公开快照）",
       "source_url": "https://www.bocwm.cn/html/1/198/197/index.html",
       "first_seen_at": "2026-09-14T14:08:37+08:00",
-      "last_seen_at": "2026-11-05T04:18:00+08:00"
+      "last_seen_at": "2026-11-05T15:43:44+08:00"
     },
     {
       "id": 9,
@@ -4507,6 +4507,29 @@
       "source_url": "https://www.bocwm.cn/html/1/198/197/43420.html",
       "first_seen_at": "2026-11-04T03:58:15+08:00",
       "last_seen_at": "2026-11-05T04:18:07+08:00"
+    },
+    {
+      "id": 229,
+      "product_key": "中银理财“稳富”固收增强（4个月定开）0325|2026-11-25",
+      "product_code": "WFZQ4MDK0325",
+      "product_name": "中银理财“稳富”固收增强（4个月定开）0325",
+      "manager": "中银理财有限责任公司",
+      "risk_level": null,
+      "product_type": null,
+      "min_purchase_amount": null,
+      "min_holding_days": null,
+      "benchmark_text": null,
+      "sale_start_date": null,
+      "sale_start_time": null,
+      "open_start_date": "2026-11-25",
+      "open_start_time": null,
+      "max_scale": null,
+      "status": "UPCOMING",
+      "preference_label": "信息不足",
+      "source_name": "中银理财产品公告",
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html",
+      "first_seen_at": "2026-11-05T15:43:46+08:00",
+      "last_seen_at": "2026-11-05T15:43:46+08:00"
     }
   ],
   "events": [
@@ -6273,45 +6296,18 @@
       "detected_at": "2026-11-04T03:58:15+08:00",
       "source_url": "https://www.bocwm.cn/html/1/198/197/43420.html",
       "fingerprint": "18c4fc0101aa59263bc5287e2dfca95bed7525b9ba25e73a555e78e6545a44a3"
+    },
+    {
+      "id": 197,
+      "product_key": "中银理财“稳富”固收增强（4个月定开）0325|2026-11-25",
+      "event_type": "NEW_PRODUCT",
+      "summary": "首次发现：中银理财“稳富”固收增强（4个月定开）0325",
+      "detected_at": "2026-11-05T15:43:46+08:00",
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html",
+      "fingerprint": "6b2ac7aa07648a932d340bcbd7d9310e7f5540c1971e8395c6de1c40b15b5abd"
     }
   ],
   "source_runs": [
-    {
-      "id": 286,
-      "scan_id": "2026-10-28T02:33:58.578766+08:00",
-      "source_name": "中银理财产品公告",
-      "url": "https://www.bocwm.cn/html/1/198/197/index.html",
-      "fetched_at": "2026-10-28T02:34:00+08:00",
-      "status": "正常",
-      "http_status": 200,
-      "item_count": 18,
-      "new_count": 2,
-      "error_message": null
-    },
-    {
-      "id": 287,
-      "scan_id": "2026-10-28T02:33:58.578766+08:00",
-      "source_name": "中国银行理财产品净值",
-      "url": "https://www.bocwm.cn/webApi/cms/productNetWorth/getNetWorthByCode",
-      "fetched_at": "2026-10-28T02:34:05+08:00",
-      "status": "正常",
-      "http_status": 200,
-      "item_count": 21670,
-      "new_count": 0,
-      "error_message": null
-    },
-    {
-      "id": 288,
-      "scan_id": "2026-10-28T14:39:49.203174+08:00",
-      "source_name": "中银理财产品展示",
-      "url": "https://www.bocwm.cn/",
-      "fetched_at": "2026-10-28T14:39:49+08:00",
-      "status": "异常",
-      "http_status": null,
-      "item_count": 0,
-      "new_count": 0,
-      "error_message": ""
-    },
     {
       "id": 289,
       "scan_id": "2026-10-28T14:39:49.203174+08:00",
@@ -6873,6 +6869,42 @@
       "status": "正常",
       "http_status": 200,
       "item_count": 23512,
+      "new_count": 0,
+      "error_message": null
+    },
+    {
+      "id": 336,
+      "scan_id": "2026-11-05T15:43:44.169158+08:00",
+      "source_name": "中银理财产品展示",
+      "url": "https://www.bocwm.cn/",
+      "fetched_at": "2026-11-05T15:43:44+08:00",
+      "status": "异常",
+      "http_status": null,
+      "item_count": 0,
+      "new_count": 0,
+      "error_message": ""
+    },
+    {
+      "id": 337,
+      "scan_id": "2026-11-05T15:43:44.169158+08:00",
+      "source_name": "中银理财产品公告",
+      "url": "https://www.bocwm.cn/html/1/198/197/index.html",
+      "fetched_at": "2026-11-05T15:43:44+08:00",
+      "status": "正常",
+      "http_status": 200,
+      "item_count": 1,
+      "new_count": 1,
+      "error_message": null
+    },
+    {
+      "id": 338,
+      "scan_id": "2026-11-05T15:43:44.169158+08:00",
+      "source_name": "中国银行理财产品净值",
+      "url": "https://www.bocwm.cn/webApi/cms/productNetWorth/getNetWorthByCode",
+      "fetched_at": "2026-11-05T15:43:46+08:00",
+      "status": "正常",
+      "http_status": 200,
+      "item_count": 23817,
       "new_count": 0,
       "error_message": null
     }
@@ -25719,6 +25751,16 @@
       "source_url": "https://www.bocwm.cn/html/1/198/197/41651.html"
     },
     {
+      "id": 24946,
+      "product_code": "AMRSJS0120",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.223778",
+      "cumulative_nav": "1.223778",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/41651.html"
+    },
+    {
       "id": 18986,
       "product_code": "AMRSJS0210",
       "nav_date": "2019-04-22",
@@ -44074,6 +44116,16 @@
       "nav_date": "2026-11-02",
       "unit_nav": "1.221862",
       "cumulative_nav": "1.221862",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/42004.html"
+    },
+    {
+      "id": 24947,
+      "product_code": "AMRSJS0210",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.222497",
+      "cumulative_nav": "1.222497",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/html/1/198/197/42004.html"
@@ -77969,6 +78021,16 @@
       "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
     },
     {
+      "id": 24948,
+      "product_code": "CYQWFCZ7D2A",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.016515",
+      "cumulative_nav": "1.016515",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/4/9494.html"
+    },
+    {
       "id": 101,
       "product_code": "CYQWFXYJX180A",
       "nav_date": "2025-09-11",
@@ -80694,6 +80756,16 @@
       "nav_date": "2026-11-02",
       "unit_nav": "1.041330",
       "cumulative_nav": "1.041330",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
+      "id": 24949,
+      "product_code": "CYQWFXYJX180A",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.041662",
+      "cumulative_nav": "1.041662",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/"
@@ -83459,6 +83531,16 @@
       "source_url": "https://www.bocwm.cn/"
     },
     {
+      "id": 24950,
+      "product_code": "CYQWFXYJX30D3A",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.041687",
+      "cumulative_nav": "1.041687",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
       "id": 11869,
       "product_code": "CYQWFXYJX30D8A",
       "nav_date": "2026-02-27",
@@ -85114,6 +85196,16 @@
       "nav_date": "2026-11-02",
       "unit_nav": "1.024026",
       "cumulative_nav": "1.024026",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
+      "id": 24951,
+      "product_code": "CYQWFXYJX30D8A",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.024584",
+      "cumulative_nav": "1.024584",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/"
@@ -88244,6 +88336,16 @@
       "nav_date": "2026-11-02",
       "unit_nav": "1.045204",
       "cumulative_nav": "1.045204",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
+      "id": 24952,
+      "product_code": "CYQWFXYJX9M2A",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.045558",
+      "cumulative_nav": "1.045558",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/"
@@ -91579,6 +91681,16 @@
       "source_url": "https://www.bocwm.cn/"
     },
     {
+      "id": 24953,
+      "product_code": "CYQWFYJ3MA",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.042198",
+      "cumulative_nav": "1.042198",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
       "id": 12630,
       "product_code": "CYQWFZDJQ14DA",
       "nav_date": "2026-04-17",
@@ -92899,6 +93011,16 @@
       "source_url": "https://www.bocwm.cn/"
     },
     {
+      "id": 24954,
+      "product_code": "CYQWFZDJQ14DA",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.013544",
+      "cumulative_nav": "1.013544",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
       "id": 12745,
       "product_code": "CYQWFZDJQ7D2A",
       "nav_date": "2026-05-29",
@@ -93949,6 +94071,16 @@
       "source_url": "https://www.bocwm.cn/"
     },
     {
+      "id": 24955,
+      "product_code": "CYQWFZDJQ7D2A",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.015363",
+      "cumulative_nav": "1.015363",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
       "id": 12833,
       "product_code": "CYQWFZDJQ90DA",
       "nav_date": "2026-06-05",
@@ -94944,6 +95076,16 @@
       "nav_date": "2026-11-02",
       "unit_nav": "1.012262",
       "cumulative_nav": "1.012262",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
+      "id": 24956,
+      "product_code": "CYQWFZDJQ90DA",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.012894",
+      "cumulative_nav": "1.012894",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/"
@@ -96649,6 +96791,16 @@
       "source_url": "https://www.bocwm.cn/"
     },
     {
+      "id": 24957,
+      "product_code": "CYQWFZQDXCL365DA",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.034414",
+      "cumulative_nav": "1.034414",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
       "id": 13069,
       "product_code": "CYQWFZQHYLD270DA",
       "nav_date": "2026-03-06",
@@ -98254,6 +98406,16 @@
       "nav_date": "2026-11-02",
       "unit_nav": "1.027443",
       "cumulative_nav": "1.027443",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
+      "id": 24958,
+      "product_code": "CYQWFZQHYLD270DA",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.027853",
+      "cumulative_nav": "1.027853",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/"
@@ -100534,6 +100696,16 @@
       "nav_date": "2026-11-02",
       "unit_nav": "1.044517",
       "cumulative_nav": "1.044517",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
+      "id": 24959,
+      "product_code": "CYQWFZQHYLD90DA",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.045092",
+      "cumulative_nav": "1.045092",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/"
@@ -103069,6 +103241,16 @@
       "source_url": "https://www.bocwm.cn/"
     },
     {
+      "id": 24960,
+      "product_code": "CYQWFZQQQPZ30D2A",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.048209",
+      "cumulative_nav": "1.048209",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
       "id": 1023,
       "product_code": "CYQWFZQQQPZ60D2A",
       "nav_date": "2025-10-24",
@@ -105549,6 +105731,16 @@
       "source_url": "https://www.bocwm.cn/"
     },
     {
+      "id": 24961,
+      "product_code": "CYQWFZQQQPZ60D2A",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.036493",
+      "cumulative_nav": "1.036493",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
       "id": 6526,
       "product_code": "CYQWFZQQQPZ90D5A",
       "nav_date": "2026-02-06",
@@ -107294,6 +107486,16 @@
       "nav_date": "2026-11-02",
       "unit_nav": "1.030260",
       "cumulative_nav": "1.030260",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
+      "id": 24962,
+      "product_code": "CYQWFZQQQPZ90D5A",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.030706",
+      "cumulative_nav": "1.030706",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/"
@@ -109629,6 +109831,16 @@
       "source_url": "https://www.bocwm.cn/"
     },
     {
+      "id": 24963,
+      "product_code": "CYQWFZQZSGZ14D2A",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.044532",
+      "cumulative_nav": "1.044532",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
       "id": 1450,
       "product_code": "CYQWFZQZSLD365DA",
       "nav_date": "2026-03-06",
@@ -111234,6 +111446,16 @@
       "nav_date": "2026-11-02",
       "unit_nav": "1.031204",
       "cumulative_nav": "1.031204",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
+      "id": 24964,
+      "product_code": "CYQWFZQZSLD365DA",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.032090",
+      "cumulative_nav": "1.032090",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/"
@@ -114704,6 +114926,16 @@
       "nav_date": "2026-11-02",
       "unit_nav": "1.047876",
       "cumulative_nav": "1.047876",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/"
+    },
+    {
+      "id": 24965,
+      "product_code": "FCYQZQ368DA",
+      "nav_date": "2026-11-03",
+      "unit_nav": "1.048402",
+      "cumulative_nav": "1.048402",
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/"
@@ -188187,6 +188419,2786 @@
       "ten_thousand_income": null,
       "seven_day_annualized": null,
       "source_url": "https://www.bocwm.cn/html/1/198/197/41906.html"
+    },
+    {
+      "id": 24966,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-08-19",
+      "unit_nav": "1.0029",
+      "cumulative_nav": "1.0029",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24967,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-08-26",
+      "unit_nav": "1.0035",
+      "cumulative_nav": "1.0035",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24968,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-09-02",
+      "unit_nav": "1.0044",
+      "cumulative_nav": "1.0044",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24969,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-09-09",
+      "unit_nav": "1.0050",
+      "cumulative_nav": "1.0050",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24970,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-09-16",
+      "unit_nav": "1.0055",
+      "cumulative_nav": "1.0055",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24971,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-09-23",
+      "unit_nav": "1.0063",
+      "cumulative_nav": "1.0063",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24972,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-09-30",
+      "unit_nav": "1.0051",
+      "cumulative_nav": "1.0051",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24973,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-10-14",
+      "unit_nav": "1.004480",
+      "cumulative_nav": "1.004480",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24974,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-10-21",
+      "unit_nav": "1.004698",
+      "cumulative_nav": "1.004698",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24975,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-10-28",
+      "unit_nav": "1.007927",
+      "cumulative_nav": "1.007927",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24976,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-11-04",
+      "unit_nav": "1.009276",
+      "cumulative_nav": "1.009276",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24977,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-11-11",
+      "unit_nav": "1.010283",
+      "cumulative_nav": "1.010283",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24978,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-11-18",
+      "unit_nav": "1.011221",
+      "cumulative_nav": "1.011221",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24979,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-11-25",
+      "unit_nav": "1.013098",
+      "cumulative_nav": "1.013098",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24980,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-12-02",
+      "unit_nav": "1.013650",
+      "cumulative_nav": "1.013650",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24981,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-12-08",
+      "unit_nav": "1.014368",
+      "cumulative_nav": "1.014368",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24982,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-12-09",
+      "unit_nav": "1.014407",
+      "cumulative_nav": "1.014407",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24983,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-12-16",
+      "unit_nav": "1.014980",
+      "cumulative_nav": "1.014980",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24984,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-12-23",
+      "unit_nav": "1.015404",
+      "cumulative_nav": "1.015404",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24985,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2021-12-30",
+      "unit_nav": "1.016228",
+      "cumulative_nav": "1.016228",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24986,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-02-24",
+      "unit_nav": "1.021742",
+      "cumulative_nav": "1.021742",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24987,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-03-03",
+      "unit_nav": "1.021222",
+      "cumulative_nav": "1.021222",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24988,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-03-10",
+      "unit_nav": "1.020724",
+      "cumulative_nav": "1.020724",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24989,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-03-17",
+      "unit_nav": "1.021403",
+      "cumulative_nav": "1.021403",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24990,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-03-24",
+      "unit_nav": "1.021360",
+      "cumulative_nav": "1.021360",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24991,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-03-25",
+      "unit_nav": "1.021492",
+      "cumulative_nav": "1.021492",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24992,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-03-31",
+      "unit_nav": "1.022384",
+      "cumulative_nav": "1.022384",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24993,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-04-07",
+      "unit_nav": "1.024033",
+      "cumulative_nav": "1.024033",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24994,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-04-14",
+      "unit_nav": "1.025504",
+      "cumulative_nav": "1.025504",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24995,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-04-21",
+      "unit_nav": "1.026348",
+      "cumulative_nav": "1.026348",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24996,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-04-28",
+      "unit_nav": "1.027346",
+      "cumulative_nav": "1.027346",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24997,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-05-05",
+      "unit_nav": "1.027955",
+      "cumulative_nav": "1.027955",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24998,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-05-12",
+      "unit_nav": "1.029418",
+      "cumulative_nav": "1.029418",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 24999,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-05-19",
+      "unit_nav": "1.030893",
+      "cumulative_nav": "1.030893",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25000,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-05-26",
+      "unit_nav": "1.031882",
+      "cumulative_nav": "1.031882",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25001,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-06-02",
+      "unit_nav": "1.031686",
+      "cumulative_nav": "1.031686",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25002,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-06-09",
+      "unit_nav": "1.031661",
+      "cumulative_nav": "1.031661",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25003,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-06-23",
+      "unit_nav": "1.033202",
+      "cumulative_nav": "1.033202",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25004,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-06-30",
+      "unit_nav": "1.033431",
+      "cumulative_nav": "1.033431",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25005,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-07-07",
+      "unit_nav": "1.033943",
+      "cumulative_nav": "1.033943",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25006,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-07-14",
+      "unit_nav": "1.035290",
+      "cumulative_nav": "1.035290",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25007,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-07-21",
+      "unit_nav": "1.036666",
+      "cumulative_nav": "1.036666",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25008,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-07-25",
+      "unit_nav": "1.036965",
+      "cumulative_nav": "1.036965",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25009,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-07-28",
+      "unit_nav": "1.037257",
+      "cumulative_nav": "1.037257",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25010,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-08-04",
+      "unit_nav": "1.038980",
+      "cumulative_nav": "1.038980",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25011,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-08-11",
+      "unit_nav": "1.038979",
+      "cumulative_nav": "1.038979",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25012,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-08-18",
+      "unit_nav": "1.040415",
+      "cumulative_nav": "1.040415",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25013,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-08-25",
+      "unit_nav": "1.040457",
+      "cumulative_nav": "1.040457",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25014,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-09-01",
+      "unit_nav": "1.040899",
+      "cumulative_nav": "1.040899",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25015,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-09-08",
+      "unit_nav": "1.042234",
+      "cumulative_nav": "1.042234",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25016,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-09-15",
+      "unit_nav": "1.042632",
+      "cumulative_nav": "1.042632",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25017,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-09-22",
+      "unit_nav": "1.043244",
+      "cumulative_nav": "1.043244",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25018,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-09-29",
+      "unit_nav": "1.042858",
+      "cumulative_nav": "1.042858",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25019,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-09-30",
+      "unit_nav": "1.042660",
+      "cumulative_nav": "1.042660",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25020,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-10-13",
+      "unit_nav": "1.043975",
+      "cumulative_nav": "1.043975",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25021,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-10-20",
+      "unit_nav": "1.044903",
+      "cumulative_nav": "1.044903",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25022,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-10-27",
+      "unit_nav": "1.045275",
+      "cumulative_nav": "1.045275",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25023,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-11-03",
+      "unit_nav": "1.045884",
+      "cumulative_nav": "1.045884",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25024,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-11-10",
+      "unit_nav": "1.045202",
+      "cumulative_nav": "1.045202",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25025,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-11-17",
+      "unit_nav": "1.040575",
+      "cumulative_nav": "1.040575",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25026,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-11-24",
+      "unit_nav": "1.041277",
+      "cumulative_nav": "1.041277",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25027,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-11-25",
+      "unit_nav": "1.041322",
+      "cumulative_nav": "1.041322",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25028,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-12-01",
+      "unit_nav": "1.041429",
+      "cumulative_nav": "1.041429",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25029,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-12-08",
+      "unit_nav": "1.039403",
+      "cumulative_nav": "1.039403",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25030,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-12-15",
+      "unit_nav": "1.037402",
+      "cumulative_nav": "1.037402",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25031,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-12-22",
+      "unit_nav": "1.038885",
+      "cumulative_nav": "1.038885",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25032,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-12-29",
+      "unit_nav": "1.040910",
+      "cumulative_nav": "1.040910",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25033,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2022-12-30",
+      "unit_nav": "1.041465",
+      "cumulative_nav": "1.041465",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25034,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-01-05",
+      "unit_nav": "1.043477",
+      "cumulative_nav": "1.043477",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25035,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-01-12",
+      "unit_nav": "1.043333",
+      "cumulative_nav": "1.043333",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25036,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-01-19",
+      "unit_nav": "1.043475",
+      "cumulative_nav": "1.043475",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25037,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-02-02",
+      "unit_nav": "1.045098",
+      "cumulative_nav": "1.045098",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25038,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-02-09",
+      "unit_nav": "1.046426",
+      "cumulative_nav": "1.046426",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25039,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-02-16",
+      "unit_nav": "1.047521",
+      "cumulative_nav": "1.047521",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25040,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-02-23",
+      "unit_nav": "1.047841",
+      "cumulative_nav": "1.047841",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25041,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-03-02",
+      "unit_nav": "1.048214",
+      "cumulative_nav": "1.048214",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25042,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-03-09",
+      "unit_nav": "1.049154",
+      "cumulative_nav": "1.049154",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25043,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-03-16",
+      "unit_nav": "1.049935",
+      "cumulative_nav": "1.049935",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25044,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-03-23",
+      "unit_nav": "1.050623",
+      "cumulative_nav": "1.050623",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25045,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-03-30",
+      "unit_nav": "1.051312",
+      "cumulative_nav": "1.051312",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25046,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-03-31",
+      "unit_nav": "1.051410",
+      "cumulative_nav": "1.051410",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25047,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-04-06",
+      "unit_nav": "1.051704",
+      "cumulative_nav": "1.051704",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25048,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-04-13",
+      "unit_nav": "1.052359",
+      "cumulative_nav": "1.052359",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25049,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-04-20",
+      "unit_nav": "1.053080",
+      "cumulative_nav": "1.053080",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25050,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-04-27",
+      "unit_nav": "1.052876",
+      "cumulative_nav": "1.052876",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25051,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-05-04",
+      "unit_nav": "1.053518",
+      "cumulative_nav": "1.053518",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25052,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-05-11",
+      "unit_nav": "1.054440",
+      "cumulative_nav": "1.054440",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25053,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-05-18",
+      "unit_nav": "1.055049",
+      "cumulative_nav": "1.055049",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25054,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-05-25",
+      "unit_nav": "1.055934",
+      "cumulative_nav": "1.055934",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25055,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-06-01",
+      "unit_nav": "1.056535",
+      "cumulative_nav": "1.056535",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25056,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-06-08",
+      "unit_nav": "1.057306",
+      "cumulative_nav": "1.057306",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25057,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-06-15",
+      "unit_nav": "1.058074",
+      "cumulative_nav": "1.058074",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25058,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-06-29",
+      "unit_nav": "1.058306",
+      "cumulative_nav": "1.058306",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25059,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-06-30",
+      "unit_nav": "1.058475",
+      "cumulative_nav": "1.058475",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25060,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-07-06",
+      "unit_nav": "1.059268",
+      "cumulative_nav": "1.059268",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25061,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-07-13",
+      "unit_nav": "1.059988",
+      "cumulative_nav": "1.059988",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25062,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-07-20",
+      "unit_nav": "1.060754",
+      "cumulative_nav": "1.060754",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25063,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-07-25",
+      "unit_nav": "1.060800",
+      "cumulative_nav": "1.060800",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25064,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-07-27",
+      "unit_nav": "1.060914",
+      "cumulative_nav": "1.060914",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25065,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-08-03",
+      "unit_nav": "1.061270",
+      "cumulative_nav": "1.061270",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25066,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-08-10",
+      "unit_nav": "1.062077",
+      "cumulative_nav": "1.062077",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25067,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-08-17",
+      "unit_nav": "1.062937",
+      "cumulative_nav": "1.062937",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25068,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-08-24",
+      "unit_nav": "1.063674",
+      "cumulative_nav": "1.063674",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25069,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-08-31",
+      "unit_nav": "1.063784",
+      "cumulative_nav": "1.063784",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25070,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-09-07",
+      "unit_nav": "1.063240",
+      "cumulative_nav": "1.063240",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25071,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-09-14",
+      "unit_nav": "1.063579",
+      "cumulative_nav": "1.063579",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25072,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-09-21",
+      "unit_nav": "1.064174",
+      "cumulative_nav": "1.064174",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25073,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-09-28",
+      "unit_nav": "1.064748",
+      "cumulative_nav": "1.064748",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25074,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-10-12",
+      "unit_nav": "1.065343",
+      "cumulative_nav": "1.065343",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25075,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-10-19",
+      "unit_nav": "1.065569",
+      "cumulative_nav": "1.065569",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25076,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-10-26",
+      "unit_nav": "1.065828",
+      "cumulative_nav": "1.065828",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25077,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-11-02",
+      "unit_nav": "1.066789",
+      "cumulative_nav": "1.066789",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25078,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-11-09",
+      "unit_nav": "1.067680",
+      "cumulative_nav": "1.067680",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25079,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-11-16",
+      "unit_nav": "1.068610",
+      "cumulative_nav": "1.068610",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25080,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-11-23",
+      "unit_nav": "1.069001",
+      "cumulative_nav": "1.069001",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25081,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-11-27",
+      "unit_nav": "1.069091",
+      "cumulative_nav": "1.069091",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25082,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-11-30",
+      "unit_nav": "1.069313",
+      "cumulative_nav": "1.069313",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25083,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-12-07",
+      "unit_nav": "1.069539",
+      "cumulative_nav": "1.069539",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25084,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-12-14",
+      "unit_nav": "1.070461",
+      "cumulative_nav": "1.070461",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25085,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-12-21",
+      "unit_nav": "1.071144",
+      "cumulative_nav": "1.071144",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25086,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-12-28",
+      "unit_nav": "1.072863",
+      "cumulative_nav": "1.072863",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25087,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2023-12-29",
+      "unit_nav": "1.073449",
+      "cumulative_nav": "1.073449",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25088,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-01-04",
+      "unit_nav": "1.073812",
+      "cumulative_nav": "1.073812",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25089,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-01-11",
+      "unit_nav": "1.074638",
+      "cumulative_nav": "1.074638",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25090,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-01-18",
+      "unit_nav": "1.075153",
+      "cumulative_nav": "1.075153",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25091,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-01-25",
+      "unit_nav": "1.075748",
+      "cumulative_nav": "1.075748",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25092,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-02-01",
+      "unit_nav": "1.076757",
+      "cumulative_nav": "1.076757",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25093,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-02-08",
+      "unit_nav": "1.077355",
+      "cumulative_nav": "1.077355",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25094,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-02-22",
+      "unit_nav": "1.078788",
+      "cumulative_nav": "1.078788",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25095,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-02-29",
+      "unit_nav": "1.079793",
+      "cumulative_nav": "1.079793",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25096,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-03-07",
+      "unit_nav": "1.080217",
+      "cumulative_nav": "1.080217",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25097,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-03-14",
+      "unit_nav": "1.080054",
+      "cumulative_nav": "1.080054",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25098,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-03-21",
+      "unit_nav": "1.080751",
+      "cumulative_nav": "1.080751",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25099,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-03-25",
+      "unit_nav": "1.080902",
+      "cumulative_nav": "1.080902",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25100,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-03-28",
+      "unit_nav": "1.081123",
+      "cumulative_nav": "1.081123",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25101,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-03-29",
+      "unit_nav": "1.081210",
+      "cumulative_nav": "1.081210",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25102,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-04-11",
+      "unit_nav": "1.082137",
+      "cumulative_nav": "1.082137",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25103,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-04-18",
+      "unit_nav": "1.082598",
+      "cumulative_nav": "1.082598",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25104,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-04-25",
+      "unit_nav": "1.083117",
+      "cumulative_nav": "1.083117",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25105,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-05-09",
+      "unit_nav": "1.084151",
+      "cumulative_nav": "1.084151",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25106,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-05-16",
+      "unit_nav": "1.084679",
+      "cumulative_nav": "1.084679",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25107,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-05-23",
+      "unit_nav": "1.085154",
+      "cumulative_nav": "1.085154",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25108,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-05-30",
+      "unit_nav": "1.085749",
+      "cumulative_nav": "1.085749",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25109,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-06-06",
+      "unit_nav": "1.086326",
+      "cumulative_nav": "1.086326",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25110,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-06-13",
+      "unit_nav": "1.086774",
+      "cumulative_nav": "1.086774",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25111,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-06-20",
+      "unit_nav": "1.087208",
+      "cumulative_nav": "1.087208",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25112,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-06-27",
+      "unit_nav": "1.087791",
+      "cumulative_nav": "1.087791",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25113,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-06-28",
+      "unit_nav": "1.087868",
+      "cumulative_nav": "1.087868",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25114,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-07-04",
+      "unit_nav": "1.088281",
+      "cumulative_nav": "1.088281",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25115,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-07-11",
+      "unit_nav": "1.088652",
+      "cumulative_nav": "1.088652",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25116,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-07-18",
+      "unit_nav": "1.089048",
+      "cumulative_nav": "1.089048",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25117,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-07-25",
+      "unit_nav": "1.089712",
+      "cumulative_nav": "1.089712",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25118,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-08-01",
+      "unit_nav": "1.090568",
+      "cumulative_nav": "1.090568",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25119,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-08-08",
+      "unit_nav": "1.090935",
+      "cumulative_nav": "1.090935",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25120,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-08-15",
+      "unit_nav": "1.090871",
+      "cumulative_nav": "1.090871",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25121,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-08-22",
+      "unit_nav": "1.091025",
+      "cumulative_nav": "1.091025",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25122,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-08-29",
+      "unit_nav": "1.090923",
+      "cumulative_nav": "1.090923",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25123,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-09-05",
+      "unit_nav": "1.091645",
+      "cumulative_nav": "1.091645",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25124,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-09-12",
+      "unit_nav": "1.092112",
+      "cumulative_nav": "1.092112",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25125,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-09-19",
+      "unit_nav": "1.092620",
+      "cumulative_nav": "1.092620",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25126,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-09-26",
+      "unit_nav": "1.093210",
+      "cumulative_nav": "1.093210",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25127,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-09-30",
+      "unit_nav": "1.092344",
+      "cumulative_nav": "1.092344",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25128,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-10-10",
+      "unit_nav": "1.091893",
+      "cumulative_nav": "1.091893",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25129,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-10-17",
+      "unit_nav": "1.093877",
+      "cumulative_nav": "1.093877",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25130,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-10-24",
+      "unit_nav": "1.093791",
+      "cumulative_nav": "1.093791",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25131,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-10-31",
+      "unit_nav": "1.094203",
+      "cumulative_nav": "1.094203",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25132,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-11-07",
+      "unit_nav": "1.095267",
+      "cumulative_nav": "1.095267",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25133,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-11-14",
+      "unit_nav": "1.095911",
+      "cumulative_nav": "1.095911",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25134,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-11-21",
+      "unit_nav": "1.096417",
+      "cumulative_nav": "1.096417",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25135,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-11-25",
+      "unit_nav": "1.096854",
+      "cumulative_nav": "1.096854",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25136,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-11-28",
+      "unit_nav": "1.097235",
+      "cumulative_nav": "1.097235",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25137,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-12-05",
+      "unit_nav": "1.098753",
+      "cumulative_nav": "1.098753",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25138,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-12-12",
+      "unit_nav": "1.099627",
+      "cumulative_nav": "1.099627",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25139,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-12-19",
+      "unit_nav": "1.100207",
+      "cumulative_nav": "1.100207",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25140,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-12-26",
+      "unit_nav": "1.100559",
+      "cumulative_nav": "1.100559",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25141,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2024-12-31",
+      "unit_nav": "1.101230",
+      "cumulative_nav": "1.101230",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25142,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-01-02",
+      "unit_nav": "1.101403",
+      "cumulative_nav": "1.101403",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25143,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-01-09",
+      "unit_nav": "1.101684",
+      "cumulative_nav": "1.101684",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25144,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-01-16",
+      "unit_nav": "1.101184",
+      "cumulative_nav": "1.101184",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25145,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-01-23",
+      "unit_nav": "1.101190",
+      "cumulative_nav": "1.101190",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25146,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-02-06",
+      "unit_nav": "1.102539",
+      "cumulative_nav": "1.102539",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25147,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-02-13",
+      "unit_nav": "1.102730",
+      "cumulative_nav": "1.102730",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25148,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-02-20",
+      "unit_nav": "1.102463",
+      "cumulative_nav": "1.102463",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25149,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-02-27",
+      "unit_nav": "1.102473",
+      "cumulative_nav": "1.102473",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25150,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-03-06",
+      "unit_nav": "1.102956",
+      "cumulative_nav": "1.102956",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25151,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-03-13",
+      "unit_nav": "1.103052",
+      "cumulative_nav": "1.103052",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25152,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-03-20",
+      "unit_nav": "1.103629",
+      "cumulative_nav": "1.103629",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25153,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-03-25",
+      "unit_nav": "1.104285",
+      "cumulative_nav": "1.104285",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25154,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-03-27",
+      "unit_nav": "1.104514",
+      "cumulative_nav": "1.104514",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25155,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-03-31",
+      "unit_nav": "1.104816",
+      "cumulative_nav": "1.104816",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25156,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-04-03",
+      "unit_nav": "1.105888",
+      "cumulative_nav": "1.105888",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25157,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-04-10",
+      "unit_nav": "1.106646",
+      "cumulative_nav": "1.106646",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25158,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-04-17",
+      "unit_nav": "1.107034",
+      "cumulative_nav": "1.107034",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25159,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-04-24",
+      "unit_nav": "1.107197",
+      "cumulative_nav": "1.107197",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25160,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-05-08",
+      "unit_nav": "1.108199",
+      "cumulative_nav": "1.108199",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25161,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-05-15",
+      "unit_nav": "1.108692",
+      "cumulative_nav": "1.108692",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25162,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-05-22",
+      "unit_nav": "1.109021",
+      "cumulative_nav": "1.109021",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25163,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-05-29",
+      "unit_nav": "1.109236",
+      "cumulative_nav": "1.109236",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25164,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-06-05",
+      "unit_nav": "1.109697",
+      "cumulative_nav": "1.109697",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25165,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-06-12",
+      "unit_nav": "1.110257",
+      "cumulative_nav": "1.110257",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25166,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-06-19",
+      "unit_nav": "1.110592",
+      "cumulative_nav": "1.110592",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25167,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-06-26",
+      "unit_nav": "1.110938",
+      "cumulative_nav": "1.110938",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25168,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-06-30",
+      "unit_nav": "1.111161",
+      "cumulative_nav": "1.111161",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25169,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-07-03",
+      "unit_nav": "1.111383",
+      "cumulative_nav": "1.111383",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25170,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-07-10",
+      "unit_nav": "1.111680",
+      "cumulative_nav": "1.111680",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25171,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-07-17",
+      "unit_nav": "1.111951",
+      "cumulative_nav": "1.111951",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25172,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-07-24",
+      "unit_nav": "1.112198",
+      "cumulative_nav": "1.112198",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25173,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-07-25",
+      "unit_nav": "1.112192",
+      "cumulative_nav": "1.112192",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25174,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-07-31",
+      "unit_nav": "1.112806",
+      "cumulative_nav": "1.112806",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25175,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-08-07",
+      "unit_nav": "1.113568",
+      "cumulative_nav": "1.113568",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25176,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-08-14",
+      "unit_nav": "1.113721",
+      "cumulative_nav": "1.113721",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25177,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-08-21",
+      "unit_nav": "1.114181",
+      "cumulative_nav": "1.114181",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25178,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-08-28",
+      "unit_nav": "1.116006",
+      "cumulative_nav": "1.116006",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25179,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-09-04",
+      "unit_nav": "1.115399",
+      "cumulative_nav": "1.115399",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25180,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-09-11",
+      "unit_nav": "1.116971",
+      "cumulative_nav": "1.116971",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25181,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-09-18",
+      "unit_nav": "1.117593",
+      "cumulative_nav": "1.117593",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25182,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-09-25",
+      "unit_nav": "1.118138",
+      "cumulative_nav": "1.118138",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25183,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-09-30",
+      "unit_nav": "1.118845",
+      "cumulative_nav": "1.118845",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25184,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-10-09",
+      "unit_nav": "1.119721",
+      "cumulative_nav": "1.119721",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25185,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-10-16",
+      "unit_nav": "1.118971",
+      "cumulative_nav": "1.118971",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25186,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-10-23",
+      "unit_nav": "1.118973",
+      "cumulative_nav": "1.118973",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25187,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-10-30",
+      "unit_nav": "1.120126",
+      "cumulative_nav": "1.120126",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25188,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-11-06",
+      "unit_nav": "1.120577",
+      "cumulative_nav": "1.120577",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25189,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-11-13",
+      "unit_nav": "1.120830",
+      "cumulative_nav": "1.120830",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25190,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-11-20",
+      "unit_nav": "1.120534",
+      "cumulative_nav": "1.120534",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25191,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-11-25",
+      "unit_nav": "1.120321",
+      "cumulative_nav": "1.120321",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25192,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-11-27",
+      "unit_nav": "1.120172",
+      "cumulative_nav": "1.120172",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25193,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-12-04",
+      "unit_nav": "1.120232",
+      "cumulative_nav": "1.120232",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25194,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-12-11",
+      "unit_nav": "1.120612",
+      "cumulative_nav": "1.120612",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25195,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-12-18",
+      "unit_nav": "1.120824",
+      "cumulative_nav": "1.120824",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25196,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-12-25",
+      "unit_nav": "1.121232",
+      "cumulative_nav": "1.121232",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25197,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2025-12-31",
+      "unit_nav": "1.122363",
+      "cumulative_nav": "1.122363",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25198,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-01-08",
+      "unit_nav": "1.123110",
+      "cumulative_nav": "1.123110",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25199,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-01-15",
+      "unit_nav": "1.123755",
+      "cumulative_nav": "1.123755",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25200,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-01-22",
+      "unit_nav": "1.124468",
+      "cumulative_nav": "1.124468",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25201,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-01-29",
+      "unit_nav": "1.125324",
+      "cumulative_nav": "1.125324",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25202,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-02-05",
+      "unit_nav": "1.124982",
+      "cumulative_nav": "1.124982",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25203,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-02-12",
+      "unit_nav": "1.125601",
+      "cumulative_nav": "1.125601",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25204,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-02-26",
+      "unit_nav": "1.126379",
+      "cumulative_nav": "1.126379",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25205,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-03-05",
+      "unit_nav": "1.125928",
+      "cumulative_nav": "1.125928",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25206,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-03-12",
+      "unit_nav": "1.126072",
+      "cumulative_nav": "1.126072",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25207,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-03-19",
+      "unit_nav": "1.125927",
+      "cumulative_nav": "1.125927",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25208,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-03-25",
+      "unit_nav": "1.125600",
+      "cumulative_nav": "1.125600",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25209,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-03-26",
+      "unit_nav": "1.125913",
+      "cumulative_nav": "1.125913",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25210,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-03-31",
+      "unit_nav": "1.126057",
+      "cumulative_nav": "1.126057",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25211,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-04-02",
+      "unit_nav": "1.126004",
+      "cumulative_nav": "1.126004",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25212,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-04-09",
+      "unit_nav": "1.126176",
+      "cumulative_nav": "1.126176",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25213,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-04-16",
+      "unit_nav": "1.126660",
+      "cumulative_nav": "1.126660",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25214,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-04-23",
+      "unit_nav": "1.127324",
+      "cumulative_nav": "1.127324",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25215,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-04-30",
+      "unit_nav": "1.127636",
+      "cumulative_nav": "1.127636",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25216,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-05-07",
+      "unit_nav": "1.127954",
+      "cumulative_nav": "1.127954",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25217,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-05-14",
+      "unit_nav": "1.128516",
+      "cumulative_nav": "1.128516",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25218,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-05-21",
+      "unit_nav": "1.128989",
+      "cumulative_nav": "1.128989",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25219,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-05-28",
+      "unit_nav": "1.129486",
+      "cumulative_nav": "1.129486",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25220,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-06-04",
+      "unit_nav": "1.129943",
+      "cumulative_nav": "1.129943",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25221,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-06-11",
+      "unit_nav": "1.129398",
+      "cumulative_nav": "1.129398",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25222,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-06-18",
+      "unit_nav": "1.130253",
+      "cumulative_nav": "1.130253",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25223,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-06-25",
+      "unit_nav": "1.130863",
+      "cumulative_nav": "1.130863",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25224,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-06-30",
+      "unit_nav": "1.131248",
+      "cumulative_nav": "1.131248",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25225,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-07-02",
+      "unit_nav": "1.131177",
+      "cumulative_nav": "1.131177",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25226,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-07-09",
+      "unit_nav": "1.131284",
+      "cumulative_nav": "1.131284",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25227,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-07-16",
+      "unit_nav": "1.131475",
+      "cumulative_nav": "1.131475",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25228,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-07-23",
+      "unit_nav": "1.131693",
+      "cumulative_nav": "1.131693",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25229,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-07-27",
+      "unit_nav": "1.131793",
+      "cumulative_nav": "1.131793",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25230,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-07-30",
+      "unit_nav": "1.131994",
+      "cumulative_nav": "1.131994",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25231,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-08-06",
+      "unit_nav": "1.132658",
+      "cumulative_nav": "1.132658",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25232,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-08-13",
+      "unit_nav": "1.133513",
+      "cumulative_nav": "1.133513",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25233,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-08-20",
+      "unit_nav": "1.133649",
+      "cumulative_nav": "1.133649",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25234,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-08-27",
+      "unit_nav": "1.133686",
+      "cumulative_nav": "1.133686",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25235,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-09-03",
+      "unit_nav": "1.133955",
+      "cumulative_nav": "1.133955",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25236,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-09-10",
+      "unit_nav": "1.134406",
+      "cumulative_nav": "1.134406",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25237,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-09-17",
+      "unit_nav": "1.134955",
+      "cumulative_nav": "1.134955",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25238,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-09-24",
+      "unit_nav": "1.135867",
+      "cumulative_nav": "1.135867",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25239,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-09-30",
+      "unit_nav": "1.134295",
+      "cumulative_nav": "1.134295",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25240,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-10-08",
+      "unit_nav": "1.134039",
+      "cumulative_nav": "1.134039",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25241,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-10-15",
+      "unit_nav": "1.135940",
+      "cumulative_nav": "1.135940",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25242,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-10-22",
+      "unit_nav": "1.136823",
+      "cumulative_nav": "1.136823",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
+    },
+    {
+      "id": 25243,
+      "product_code": "WFZQ4MDK0325",
+      "nav_date": "2026-10-29",
+      "unit_nav": "1.137043",
+      "cumulative_nav": "1.137043",
+      "ten_thousand_income": null,
+      "seven_day_annualized": null,
+      "source_url": "https://www.bocwm.cn/html/1/198/197/43437.html"
     },
     {
       "id": 3571,
